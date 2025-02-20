@@ -407,7 +407,10 @@ form select:hover {
 }
 .reviews .swiper-slide {
     max-width: fit-content;
-    margin-right: 52px !important;
+    /* margin-right: 52px !important; */
+}
+.swiper-free-mode > .swiper-wrapper {
+    transition-timing-function: linear !important;
 }
 .review-card {
     max-width: 230px;

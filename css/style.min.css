@@ -148,7 +148,7 @@
     }
     .reviews .swiper-slide {
         max-width: fit-content;
-        margin-right: 16px !important; 
+        /* margin-right: 16px !important;  */
     }
     .review-card {
         min-width: 193px;
