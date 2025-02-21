@@ -351,6 +351,9 @@ form select:hover {
     background-color: rgba(0, 102, 255, 1);
     cursor: pointer;
     transition: all .1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .form-submit:hover {
     opacity: 0.8;
