@@ -342,4 +342,16 @@
         font-size: 13px;
         line-height: 18px;
     }
+
+    .support-button {
+        width: 58px;
+        height: 58px;
+        border: 4px solid rgba(183, 212, 255, 1);
+        bottom: 8px;
+        right: 8px;
+    }
+    .support-button img {
+        width: 14px;
+        height: 14px;
+    }
 }
