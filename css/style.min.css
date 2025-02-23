@@ -397,7 +397,9 @@
         display: none;
     }
 
-
+    #container {
+        height: calc(100% - 10px);
+    }
     .support-right {
         height: calc(100vh - 316px - 73px);
         width: 100%;
