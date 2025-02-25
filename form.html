@@ -17,6 +17,12 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet"
     />
+    <script>
+        function submitForm() {
+            document.getElementById('applyForm').style.display = 'none';
+            document.getElementById('applied').style.display = 'block';
+        }
+    </script>
 </head>
 <body>
     <nav>
@@ -30,14 +36,19 @@
         <div class="form-container">
             <h2>Take the next steps toward financial stability</h2>
 
-            <form class="apply-form" action="">
+            <form class="apply-form" action="" id="applyForm">
                 <input class="apply-form-input" type="text" placeholder="First Name" />
                 <input class="apply-form-input" type="text" placeholder="Last Name" />
                 <input class="apply-form-input" type="text" placeholder="Phone Number" />
                 <input class="apply-form-input" type="email" placeholder="Email adress" />
 
-                <input class="form-submit" type="submit" value="Submit" />
+                <button class="form-submit" type="button" onclick="submitForm()">Submit</button>
             </form>
+
+            <div class="applied" id="applied">
+                <p>Your contact information has been saved.<br> <strong>We keep your data confidential and use it only to contact you.</strong></p>
+                <a class="form-submit" href="tel:">Call us</a>
+            </div>
 
             <p>
                 By clicking “Submit”, you agree that the phone number and email address you are providing may be used to contact you by American Debt Relief (including auto-dialed/auto-selected and prerecorded calls, as well as text/SMS messages). Msg. and data rates apply, and your consent to such contact/marketing is not required for purchase. Msg frequency varies; max 2 texts per day and 7 texts per week. We may also e-mail you and you may let us know at any time if you are no longer interested in hearing from us via a particular communication platform.

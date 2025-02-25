@@ -44,9 +44,9 @@ const messages = [
         operator_message:
             "What is the amount of your credit debt?",
         user_answer: [
-            new Answer("Up to $ 5000", true),
-            new Answer("5000$ - 15000$", true),
-            new Answer("More than $15000", true),
+            new Answer("15 000$ - 25 000$", true),
+            new Answer("25 000$ - 50 000$", true),
+            new Answer("More than $50 000", true),
         ],
     },
     {
