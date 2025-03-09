@@ -314,7 +314,7 @@
     }
 
     .form-container {
-        margin: 56px auto 0;
+        margin: 72px auto 0;
     }
     .form-container h2 {
         font-size: 24px;
@@ -404,7 +404,7 @@
 
     .support {
         height: calc(100vh - 73px);
-        margin: 22px auto 0;
+        margin: 72px auto 0;
         flex-direction: column;
     }
     .support-left {
