@@ -64,6 +64,44 @@ nav img {
     opacity: 0.8;
 }
 
+.navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 540px;
+    padding: 0px 14px;
+}
+.navigation-top {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation-top img {
+    width: 141px;
+    height: 32px;
+}
+.navigation-top .close {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.navigation .navigation-item {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #000000;
+    transition: all .1s ease;
+}
+.navigation .navigation-item:hover {
+    color: #0066FF;
+}
+.navigation .active {
+    color: #0066FF;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
 header {
     margin: 60px auto 0 auto;
     width: 100%;

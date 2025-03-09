@@ -12,11 +12,46 @@
 
 @media screen and (max-width: 780px) {
     nav {
-        padding: 18px 16px 0;
+        padding: 18px 16px 22px;
+        position: fixed;
+        z-index: 100;
+        background-color: #fff;
     }
     .burger-menu {
         display: block;
+        cursor: pointer;
     }
+    .navigation {
+        width: 0;
+        height: calc(100vh);
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0;
+        gap: 24px;
+        z-index: 100;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: all 0.3s ease;
+    }
+    .navigation-top {
+        display: flex;
+        width: 94%;
+        margin: 18px 16px 0;
+    }
+    .navigation-item {
+        margin-left: 16px;
+    }
+    .navigation-item:first-of-type {
+        margin-top: 55px;
+    }
+    .navigation.active {
+        width: 100%;
+    }
+
     nav img {
         max-width: 141px;
     }
@@ -27,7 +62,7 @@
     }
 
     header {
-        margin: 22px auto 0 auto;
+        margin: 72px auto 0 auto;
     }
     .header-swiper {
         width: 100%;
