@@ -69,7 +69,8 @@ nav img {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-width: 540px;
+    max-width: 780px;
+    gap: 10px;
     padding: 0px 14px;
 }
 .navigation-top {
