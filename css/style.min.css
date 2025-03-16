@@ -72,7 +72,8 @@
         max-width: 141px;
     }
     .nav-button {
-        width: 92px;
+        padding: 0 20px;
+        width: auto;
         height: 32px;
         font-size: 12px;
     }
@@ -126,6 +127,7 @@
         margin-top: 20px;
         width: 135px;
         min-height: 32px;
+        max-height: 32px;
         font-size: 12px;
         gap: 4px;
     }
@@ -144,6 +146,7 @@
     }
     .payment {
         gap: 12px;
+        padding: 12px 0 12px;
     }
     .feedback-conclusion {
         margin-top: 31px;
@@ -279,10 +282,6 @@
         max-width: 343px;
         min-height: 343px;
         margin: 0 auto;
-    }
-    .tip-card-content .title {
-        font-size: 10px;
-        line-height: 15px;
     }
 
     .faq {
@@ -555,6 +554,19 @@
         margin-bottom: 12px;
     }
     .blog-content h2 {
+        font-size: 24px;
+    }
+
+    .CTA {
+        margin: 24px auto 0;
+    }
+    .CTA-container {
+        margin-bottom: 16px;
+    }
+    .CTA-container .left-border {
+        height: 116px;
+    }
+    .CTA-container p{
         font-size: 24px;
     }
 }
