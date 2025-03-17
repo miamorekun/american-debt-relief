@@ -969,75 +969,65 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/support-img.jpg);
     background-size: cover;
     background-position: 70% 0;
+    padding-bottom: 54px;
+}
+.support-left-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.attention {
+    color: #FF0000;
+}
+.support-left .attention:last-of-type {
+    font-weight: 700;
 }
 .support-left h2 {
-    margin-top: 60px;
-    margin-bottom: 10px;
-    max-width: 516px;
+    font-family: "Teachers", sans-serif;
+    margin-top: 114px;
+    margin-bottom: 32px;
+    max-width: 579px;
     width: 90%;
-    font-size: 48px;
-    font-weight: 700;
+    font-size: 64px;
+    font-weight: 600;
     line-height: 64px;
     text-align: center;
     color: rgba(255, 255, 255, 1);
 }
 .support-left p {
     margin-top: 20px;
-    max-width: 453px;
+    max-width: 588px;
     width: 90%;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 29px;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 100%;
     text-align: center;
     color: rgba(255, 255, 255, 1);
 }
-.support-left-container {
-    margin: 64px auto 0;
-    max-width: 528px;
-    width: 528px;
+
+.online {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    background: rgba(255, 255, 255, 0.5);
-    padding: 0 0 24px;
+    gap: 5px;
+    width: fit-content;
 }
-.support-left-container .support-title {
-    margin: 0 0 5px;
-    padding: 0;
-    width: 528px;
-    height: 63px;
-    background-color: rgba(240, 248, 255, 1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.online div {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #33FF00;
 }
-.support-left-container .support-title h2 {
-    margin: 0;
-    font-size: 32px;
-    font-weight: 200;
-    line-height: 28px;
-    text-align: center;
-    color: rgba(0, 0, 0, 1);
-    font-family: "Inter", serif;
-}
-.support-left-container .support-text {
-    margin-top: 19px;
-    font-size: 20px;
+.online p {
+    font-size: 24px;
     font-weight: 400;
-    line-height: 24px;
-    text-align: center;
-    max-width: 496px;
-    width: 100%;
-    color: rgba(0, 0, 0, 1);
-    font-family: "Inter", serif !important;
-}
-.support-left .nav-button {
-    margin-top: 60px;
-    width: 223px;
-    height: 48px;
+    line-height: 100%;
+    margin: 0;
 }
 
 .support-right {
@@ -1118,11 +1108,15 @@ footer {
 .error {
     background-color: #ee0000;
     color: white;
-    padding: 8px 15px;
-    border-radius: 20px;
+    padding: 16px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
     align-self: flex-start;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-    font-size: 1em;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 24px;
 }
 
 @keyframes blink {

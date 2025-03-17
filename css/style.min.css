@@ -18,9 +18,6 @@
     .support-left {
         justify-content: center;
     }
-    .support-left-container {
-        display: none;
-    }
     .support-right {
         padding-right: 20px;
     }
@@ -423,28 +420,30 @@
         flex-direction: column;
     }
     .support-left {
-        max-height: 316px;
+        max-height: 233px;
         width: 100%;
+        padding-bottom: 9px;
+        justify-content: space-between;
     }
     .support-left h2 {
-        margin-top: 78px;
-        margin-bottom: 13px;
-        max-width: 343px;
-        font-size: 32px;
-        font-weight: 500;
-        line-height: 42px;
+        font-family: "Teachers", sans-serif;
+        margin-top: 18px;
+        margin-bottom: 19px;
+        font-size: 28px;
+        line-height: 30px;
     }
     .support-left p {
-        margin-top: 20px;
-        max-width: 343px;
-        font-size: 18px;
-        line-height: 22px;
+        margin-top: 4px;
+        font-size: 16px;
     }
-    .support-left p:last-of-type {
-        margin-bottom: 40px;
+    
+    .online div {
+        width: 12px;
+        height: 12px;
     }
-    .support-left .nav-button {
-        display: none;
+    .online p {
+        font-size: 14px;
+        margin: 0;
     }
 
     #container {
@@ -474,6 +473,11 @@
     
     .operator-text {
         max-width: 87%;
+        padding: 16px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .error {
         padding: 16px;
         font-size: 16px;
         line-height: 19px;

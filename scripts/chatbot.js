@@ -6,8 +6,6 @@ function scrollToBottom() {
     });
 }
 
-// Define the messages array
-
 class Answer {
     constructor(text, isPositive) {
         this.text = text;
@@ -16,112 +14,46 @@ class Answer {
 }
 
 const messages = [
-    {
-        operator_message:
-            "Hello! Please answer a few quick questions so we can find the best debt relief options for you. All information is confidential.",
-        user_answer: [new Answer("Start", true)],
-    },
-    {
-        operator_message:
-            "How old are you?",
-        user_answer: [
-            new Answer("18-24 years old", true),
-            new Answer("25-34 years old", true),
-            new Answer("35-44 years old", true),
-            new Answer("45+ years old", true),
-        ],
-    },
-    {
-        operator_message:
-            "How long have you been in debt?",
-        user_answer: [
-            new Answer("2-3 months", true),
-            new Answer("3-6 months", true),
-            new Answer("more than 6 months", true),
-        ],
-    },
-    {
-        operator_message:
-            "What is the amount of your credit debt?",
-        user_answer: [
-            new Answer("15 000$ - 25 000$", true),
-            new Answer("25 000$ - 50 000$", true),
-            new Answer("More than $50 000", true),
-        ],
-    },
-    {
-        operator_message:
-            "Is it important for you to maintain your credit score?",
-        user_answer: [
-            new Answer("Yes, it is very important", true),
-            new Answer("It is not so important", true),
-        ],
-    },
-    {
-        operator_message:
-            "Do you agree to undergo a debt restructuring procedure and reduce your credit score by up to 75%? ",
-        user_answer: [
-            new Answer("Yes", true),
-            new Answer("No", true),
-        ],
-    },
-    {
-        operator_message: "🎉 Congratulations! 🎁",
-        user_answer: null,
-    },
-    {
-        operator_message:
-            "You are prequalified to receive up to $50,000 or more in debt relief.",
-        user_answer: null,
-    },
-    {
-        operator_message:
-            "You can use this to avoid paying overdue credit card debts, medical bills, personal loans, and more…",
-        user_answer: null,
-    },
-    {
-        operator_message:
-            "Tap the button with the number below to call now and get up to $50,000 in Debt Relief. It only takes 2 minutes.",
-        user_answer: null,
-    },
+    { operator_message: "Hello 👋", user_answer: null },
+    { operator_message: "I’m Olivia, and I’m here to help you reduce your debts.", user_answer: null },
+    { operator_message: "Do you want to know if you qualify for $15,000 or more in credit card debt relief? Tap Yes! 😃", user_answer: [new Answer("Yes", true)] },
+    { operator_message: "Alright, let me ask you two quick questions.", user_answer: null },
+    { operator_message: "Do you have more than $15,000 in credit card debt? Tap Yes or No", user_answer: [new Answer("Yes", true), new Answer("No", false)] },
+    { operator_message: "Would you like to reduce your debt today?", user_answer: [new Answer("Yes", true), new Answer("No", false)] },
+    { operator_message: "🎉 Congratulations! 🎁", user_answer: null },
+    { operator_message: "You are prequalified to receive up to $50,000 or more in debt relief.", user_answer: null },
+    { operator_message: "You can use this to avoid paying overdue credit card debts, medical bills, personal loans, and more…", user_answer: null },
+    { operator_message: "Tap the button with the number below to call now and get up to $50,000 in Debt Relief. It only takes 2 minutes.", user_answer: null }
 ];
 
 let currentMessageIndex = 0;
 
 function displayMessage(content, sender) {
-    if (sender == "call") {
-        const messageDiv = document.createElement("div");
-        messageDiv.classList.add("message", sender);
-
-        var link = document.createElement("a");
-        link.href = "tel:" + content;
-        link.textContent = content;
-
-        messageDiv.appendChild(link);
-
-        document
-            .getElementById("chat-container")
-            .appendChild(messageDiv);
-        document.getElementById("chat-container").scrollTop =
-            document.getElementById("chat-container").scrollHeight;
-        scrollToBottom();
-        return;
-    }
-
     const messageDiv = document.createElement("div");
     messageDiv.classList.add("message", sender);
-    messageDiv.textContent = content;
-    document
-        .getElementById("chat-container")
-        .appendChild(messageDiv);
-    document.getElementById("chat-container").scrollTop =
-        document.getElementById("chat-container").scrollHeight;
-    scrollToBottom();
+
+    if (sender === "call") {
+        const link = document.createElement("a");
+        link.href = "tel:" + content;
+        link.textContent = content;
+        messageDiv.appendChild(link);
+    } else {
+        messageDiv.textContent = content;
+    }
+
+    document.getElementById("chat-container").appendChild(messageDiv);
+
+    if (sender === "call" || sender === "user" || sender === "operator-message") {
+        setTimeout(() => {
+            scrollToBottom(); // Скролимо після того, як повідомлення додано
+        }, 300);
+    }
 }
 
 function showOperatorMessage() {
     const message = messages[currentMessageIndex];
     if (message.operator_message) {
+        // Створюємо контейнер для повідомлення оператора
         const operatorMessageDiv = document.createElement("div");
         operatorMessageDiv.classList.add("message", "operator-message");
 
@@ -132,7 +64,9 @@ function showOperatorMessage() {
         // Створюємо контейнер для тексту
         const textDiv = document.createElement("div");
         textDiv.classList.add("operator-text");
-        textDiv.textContent = message.operator_message;
+
+        // Додаємо анімацію трьох крапок
+        textDiv.innerHTML = "<span class='typing-dots'><span>.</span><span>.</span><span>.</span></span>";
 
         // Додаємо аватар і текст у повідомлення
         operatorMessageDiv.appendChild(avatarDiv);
@@ -141,17 +75,25 @@ function showOperatorMessage() {
         document.getElementById("chat-container").appendChild(operatorMessageDiv);
         scrollToBottom();
 
-        if (message.user_answer && message.user_answer.length > 0) {
-            displayAnswerButtons(message.user_answer);
-        } else {
-            proceedToNextMessage();
-        }
+        // Показуємо реальне повідомлення після паузи
+        setTimeout(() => {
+            textDiv.innerHTML = message.operator_message; // Замінюємо крапки на справжній текст
+
+            if (message.user_answer && message.user_answer.length > 0) {
+                displayAnswerButtons(message.user_answer);
+            } else {
+                proceedToNextMessage();
+            }
+            scrollToBottom();
+        }, 1500); // Час затримки перед відображенням справжнього повідомлення
     }
 }
 
 function displayAnswerButtons(answers) {
-    const answerButtonsContainer =
-        document.getElementById("answer-buttons");
+    const answerButtonsContainer = document.getElementById("answer-buttons");
+
+    // Очищуємо попередні кнопки
+    answerButtonsContainer.innerHTML = "";
 
     answers.forEach((answer) => {
         const button = document.createElement("button");
@@ -161,8 +103,8 @@ function displayAnswerButtons(answers) {
         answerButtonsContainer.appendChild(button);
     });
 
-    // Enable buttons after operator's message is shown
-    enableAnswerButtons();
+    // Прокручуємо вниз після додавання кнопок
+    scrollToBottom();
 }
 
 function handleUserResponse(response) {
@@ -170,7 +112,7 @@ function handleUserResponse(response) {
 
     if (!response.isPositive) {
         displayMessage(
-            "Desafortunadamente, usted no califica para la Liquidación de Deudas.",
+            "Unfortunately, you do not qualify for Debt Settlement.",
             "error"
         );
         return;
@@ -192,7 +134,10 @@ function proceedToNextMessage() {
     if (currentMessageIndex < messages.length) {
         setTimeout(showOperatorMessage, 500);
     } else {
-        displayMessage("(888) 217-3304", "call");
+        setTimeout(() => {
+            displayMessage("(888) 217-3304", "call");
+            scrollToBottom();
+        }, 500);
     }
 }
 
