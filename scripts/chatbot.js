@@ -63,10 +63,17 @@ function showOperatorMessage() {
 
         // Створюємо контейнер для тексту
         const textDiv = document.createElement("div");
-        textDiv.classList.add("operator-text");
+        textDiv.classList.add("operator-text", "typing");
 
-        // Додаємо анімацію трьох крапок
-        textDiv.innerHTML = "<span class='typing-dots'><span>.</span><span>.</span><span>.</span></span>";
+        // Створюємо контейнер для анімації (три круги)
+        const typingAnimation = document.createElement("div");
+        typingAnimation.classList.add("typing-animation");
+        for (let i = 0; i < 3; i++) {
+            const circle = document.createElement("div");
+            circle.classList.add("circle");
+            typingAnimation.appendChild(circle);
+        }
+        textDiv.appendChild(typingAnimation);
 
         // Додаємо аватар і текст у повідомлення
         operatorMessageDiv.appendChild(avatarDiv);
@@ -77,7 +84,8 @@ function showOperatorMessage() {
 
         // Показуємо реальне повідомлення після паузи
         setTimeout(() => {
-            textDiv.innerHTML = message.operator_message; // Замінюємо крапки на справжній текст
+            textDiv.classList.remove("typing"); // Видаляємо клас анімації
+            textDiv.innerHTML = message.operator_message; // Замінюємо анімацію на текст
 
             if (message.user_answer && message.user_answer.length > 0) {
                 displayAnswerButtons(message.user_answer);

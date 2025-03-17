@@ -420,7 +420,7 @@
         flex-direction: column;
     }
     .support-left {
-        max-height: 233px;
+        max-height: 210px;
         width: 100%;
         padding-bottom: 9px;
         justify-content: space-between;
@@ -450,9 +450,9 @@
         height: calc(100% - 10px);
     }
     .support-right {
-        height: calc(100vh - 316px - 73px);
+        height: calc(100vh - 210px - 73px);
         width: 100%;
-        padding: 32px 16px 0;
+        padding: 16px 16px 0;
     }
     #chat-container {
         padding: 0;
