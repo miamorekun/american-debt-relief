@@ -600,14 +600,14 @@ form select:hover {
     min-height: 434px;
     width: 90%;
     aspect-ratio: 1/1;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/fintip-2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/blog-7.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 16px;
     transition: all .3s ease;
 }
 .tips-swiper .swiper-slide.swiper-slide-active .tip-card {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/fintip-2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/blog-7.jpg);
 }
 .tips-swiper .swiper-slide:first-of-type .tip-card {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/blog-1.jpg);
