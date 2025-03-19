@@ -1290,7 +1290,7 @@ footer {
 }
 
 .blog-section-container article {
-    margin-bottom: 20px;
+    margin-bottom: 28px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1329,7 +1329,7 @@ footer {
 .blog-section-container article div {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     margin-bottom: 20px;
 }
@@ -1378,14 +1378,11 @@ footer {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 .reading-time p {
     font-size: 18px;
     font-weight: 500;
-}
-.reading-time .date {
-    color: #b7b7b7;
 }
 .blog-article {
     margin: 28px auto 0;
@@ -1513,4 +1510,70 @@ li {
     margin-left: 2px;
     animation: blink 1s infinite;
     display: inline-block; /* Aligns circles in a single line */
+}
+
+.hiw-header {
+    margin: 44px auto 0;
+    max-width: 1312px;
+    width: 90%; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+.header-left {
+    width: 50%;
+
+}
+.header-left img {
+    width: 100%;
+}
+.header-right {
+    width: calc(50% - 78px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.header-right .header-text {
+    margin-top: 25px;
+    max-width: 494px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.header-right .header-text h1 {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 150%;
+}
+.header-right .form-submit {
+    margin: 44px 0 0;
+    width: 240px;
+    height: 55px;
+}
+.accent {
+    color: #0066FF;
+}
+
+.line {
+    margin: 120px auto 0;
+    width: 100%;
+    height: 159px;
+    background-color: #262946;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line-container {
+    width: 100%;
+    padding: 44px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line h2 {
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 100%;
+    color: #FFF;
 }
