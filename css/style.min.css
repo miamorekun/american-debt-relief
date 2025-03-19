@@ -12,6 +12,20 @@
     .blog-section-container h3 {
         display: none;
     }
+    .steps {
+        justify-content: center;
+    }
+
+
+    .header-right {
+        width: calc(50% - 40px);
+    }
+    .header-right .header-text {
+        margin-top: 15px;
+    }
+    .header-right .header-text h1 {
+        font-size: 48px;
+    }
 }
 
 @media screen and (max-width: 1080px) {
@@ -20,6 +34,10 @@
     }
     .support-right {
         padding-right: 20px;
+    }
+
+    .line h2 {
+        font-size: 32px;
     }
 }
 
@@ -572,5 +590,91 @@
     }
     .CTA-container p{
         font-size: 24px;
+    }
+
+
+    .hiw-swiper {
+        margin: 20px auto 0;
+        width: 100%;
+        height: 458px;
+    }
+    .hiw-swiper .swiper-slide {
+        width: 100% !important;
+    }
+    .hiw-swiper .feedback-card {
+        max-width: 343px;
+        max-height: 428px;
+        margin: 0 auto;
+    }
+    .hiw-swiper .left-side {
+        max-height: 428px;
+    }
+
+    .hiw-swiper .right-side {
+        height: 150px;
+    }
+    .hiw-swiper .feedback-name {
+        margin-top: 16px;
+        font-size: 12px;
+        line-height: 100%;
+    }
+    .hiw-swiper .feedback-content {
+        margin-top: 14px;
+        font-size: 14px;
+        line-height: 100%;
+        min-height: 51px;
+    }
+    .hiw-swiper .feedback-conclusion {
+        margin-bottom: 10px;
+        margin-top: 14px;
+        font-size: 14px;
+    }
+    .hiw-swiper .swiper-pagination {
+        display: block;
+    }
+
+    .hiw-header {
+        margin: 20px auto 0;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .header-left {
+        width: 100%;
+    }
+    .header-right {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+    }
+    .header-right .header-text {
+        margin-top: 0;
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 6px;
+    }
+    .header-right .header-text h1 {
+        font-size: 16px;
+    }
+    .header-right .form-submit {
+        display: none;
+    }
+
+    .line {
+        margin: 40px auto 0;
+        height: 112px;
+    }
+    .line-container {
+        padding: 44px 0;
+    }
+    .line h2 {
+        font-size: 20px;
+    }
+
+    .aswp {
+        margin-top: 12px;
     }
 }
