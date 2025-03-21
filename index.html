@@ -116,16 +116,19 @@
                 updateLinksWithPhone(); // Оновлюємо посилання
 
                 await loadMarketCallScript(); // Завантажуємо MarketCall
+
                 mcc("init", {
                     site: 816,
                     serviceBaseUrl: "//www.marketcall.com",
                 });
 
                 mcc("requestTrackingNumber", {
-                    campaign: "309874",
+                    campaign: bid || "default", // Використовуємо bid як компанію
                     mask: "(xxx) xxx-xx-xx",
                     subid: "{subid}",
                 });
+
+                console.log(`mcc запущено з campaign ID: ${bid || "default"}`);
             }
 
             document.addEventListener("DOMContentLoaded", init);
