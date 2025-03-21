@@ -28,6 +28,29 @@
         <script src="scripts/reviews.js" type="module"></script>
         <script src="scripts/faq-list.js" type="module"></script>
         <script src="scripts/mobile-menu.js" type="module"></script>
+
+        <script>
+            // Функція для оновлення всіх посилань з певним id
+            function updateLinksWithPhone() {
+                const phoneNumber = localStorage.getItem("businessPhone"); // Отримання номера з localStorage
+                if (!phoneNumber) {
+                    console.log("Номер телефону відсутній у localStorage");
+                    return;
+                }
+
+                // Знаходимо всі посилання з id, наприклад, "phoneLink"
+                const links = document.querySelectorAll("#phoneLink");
+
+                links.forEach((link) => {
+                    link.href = `tel:` + phoneNumber; // Оновлюємо посилання
+                });
+
+                console.log("Посилання оновлено з номером:", phoneNumber);
+            }
+
+            // Викликати функцію після завантаження сторінки
+            document.addEventListener("DOMContentLoaded", updateLinksWithPhone);
+        </script>
     </head>
     <body>
         <nav>
@@ -51,7 +74,7 @@
                     <a class="navigation-item" href="blog.html">BLOG</a>
                     <a class="navigation-item" href="howitworks.html">How it works</a>
                 </div>
-                <a href="/" class="nav-button">Call us</a>
+                <a id="phoneLink" href="tel:" class="nav-button">Call us</a>
             </div>
         </nav>
         <a href="support.html" class="support-button">
