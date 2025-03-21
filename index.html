@@ -33,32 +33,28 @@
             // Функція для отримання bid з URL
             function getBidFromURL() {
                 const urlParams = new URLSearchParams(window.location.search);
-                return urlParams.get("bid"); // Отримання значення параметра "bid"
+                return urlParams.get("bid");
             }
 
             async function loadOffer(bid, type) {
                 try {
-                    const response = await fetch("offers/offers.json"); // Завантаження JSON
-                    const offers = await response.json(); // Перетворення в об'єкт
+                    const response = await fetch("offers/offers.json");
+                    const offers = await response.json();
 
                     if (offers[bid]) {
-                        // Отримання номерів телефону
                         const creditCardPhone = offers[bid]["creditCard"];
                         const studentPhone = offers[bid]["student"];
                         const businessPhone = offers[bid]["business"];
 
-                        // Збереження в змінні
-                        console.log(`Credit Card Phone: ${creditCardPhone}`);
-                        console.log(`Student Phone: ${studentPhone}`);
-                        console.log(`Business Phone: ${businessPhone}`);
-
-                        // Збереження в localStorage
                         localStorage.setItem(
                             "creditCardPhone",
                             creditCardPhone
                         );
                         localStorage.setItem("studentPhone", studentPhone);
                         localStorage.setItem("businessPhone", businessPhone);
+
+                        // Генеруємо подію, яка повідомить інший скрипт, що дані готові
+                        document.dispatchEvent(new Event("dataLoaded"));
                     } else {
                         console.log("Офер не знайдено");
                     }
@@ -67,63 +63,66 @@
                 }
             }
 
-            // Отримання bid з URL
             const bid = getBidFromURL();
-            const type = "creditCard"; // Тип номера (creditCard, student, business)
+            const type = "creditCard";
 
             if (bid) {
-                loadOffer(bid, type); // Викликаємо функцію тільки якщо bid знайдено
+                loadOffer(bid, type);
             } else {
                 console.log("BID не знайдено в URL");
             }
-
-            // Функція для оновлення всіх посилань з певним id
-            function updateLinksWithPhone() {
-                const phoneNumber = localStorage.getItem("creditCardPhone"); // Отримання номера з localStorage
-                if (!phoneNumber) {
-                    console.log("Номер телефону відсутній у localStorage");
-                    return;
-                }
-
-                // Знаходимо всі посилання з id, наприклад, "phoneLink"
-                const links = document.querySelectorAll("#phoneLink");
-
-                links.forEach((link) => {
-                    link.href = `tel:` + phoneNumber; // Оновлюємо посилання
-                });
-
-                console.log("Посилання оновлено з номером:", phoneNumber);
-            }
-
-            // Викликати функцію після завантаження сторінки
-            document.addEventListener("DOMContentLoaded", updateLinksWithPhone);
         </script>
 
         <script>
-            (function (w, d, s, o, f, js, fjs) {
-                w[o] =
-                    w[o] ||
-                    function () {
-                        (w[o].q = w[o].q || []).push(arguments);
-                    };
-                (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
-                js.id = o;
-                js.src = f;
-                js.async = 1;
-                fjs.parentNode.insertBefore(js, fjs);
-            })(
-                window,
-                document,
-                "script",
-                "mcc",
-                "https://marketcall.com/js/mc-calltracking.js"
-            );
-            mcc("init", { site: 816, serviceBaseUrl: "//www.marketcall.com" });
+            document.addEventListener("dataLoaded", function () {
+                function updateLinksWithPhone() {
+                    const phoneNumber = localStorage.getItem("creditCardPhone");
+                    if (!phoneNumber) {
+                        console.log("Номер телефону відсутній у localStorage");
+                        return;
+                    }
 
-            mcc("requestTrackingNumber", {
-                campaign: "309874",
-                mask: "(xxx) xxx-xx-xx",
-                subid: "{subid}",
+                    const links = document.querySelectorAll("#phoneLink");
+                    links.forEach((link) => {
+                        link.href = `tel:` + phoneNumber;
+                    });
+
+                    console.log("Посилання оновлено з номером:", phoneNumber);
+                }
+
+                updateLinksWithPhone();
+
+                // Запускаємо MarketCall тільки після оновлення посилань
+                (function (w, d, s, o, f, js, fjs) {
+                    w[o] =
+                        w[o] ||
+                        function () {
+                            (w[o].q = w[o].q || []).push(arguments);
+                        };
+                    (js = d.createElement(s)),
+                        (fjs = d.getElementsByTagName(s)[0]);
+                    js.id = o;
+                    js.src = f;
+                    js.async = 1;
+                    fjs.parentNode.insertBefore(js, fjs);
+                })(
+                    window,
+                    document,
+                    "script",
+                    "mcc",
+                    "https://marketcall.com/js/mc-calltracking.js"
+                );
+
+                mcc("init", {
+                    site: 816,
+                    serviceBaseUrl: "//www.marketcall.com",
+                });
+
+                mcc("requestTrackingNumber", {
+                    campaign: "309874",
+                    mask: "(xxx) xxx-xx-xx",
+                    subid: "{subid}",
+                });
             });
         </script>
     </head>
