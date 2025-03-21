@@ -33,28 +33,32 @@
             // Функція для отримання bid з URL
             function getBidFromURL() {
                 const urlParams = new URLSearchParams(window.location.search);
-                return urlParams.get("bid");
+                return urlParams.get("bid"); // Отримання значення параметра "bid"
             }
 
-            // Функція для завантаження оферів
-            async function loadOffer(bid) {
+            async function loadOffer(bid, type) {
                 try {
-                    const response = await fetch("offers/offers.json");
-                    const offers = await response.json();
+                    const response = await fetch("offers/offers.json"); // Завантаження JSON
+                    const offers = await response.json(); // Перетворення в об'єкт
 
                     if (offers[bid]) {
+                        // Отримання номерів телефону
+                        const creditCardPhone = offers[bid]["creditCard"];
+                        const studentPhone = offers[bid]["student"];
+                        const businessPhone = offers[bid]["business"];
+
+                        // Збереження в змінні
+                        console.log(`Credit Card Phone: ${creditCardPhone}`);
+                        console.log(`Student Phone: ${studentPhone}`);
+                        console.log(`Business Phone: ${businessPhone}`);
+
+                        // Збереження в localStorage
                         localStorage.setItem(
                             "creditCardPhone",
-                            offers[bid]["creditCard"]
+                            creditCardPhone
                         );
-                        localStorage.setItem(
-                            "studentPhone",
-                            offers[bid]["student"]
-                        );
-                        localStorage.setItem(
-                            "businessPhone",
-                            offers[bid]["business"]
-                        );
+                        localStorage.setItem("studentPhone", studentPhone);
+                        localStorage.setItem("businessPhone", businessPhone);
                     } else {
                         console.log("Офер не знайдено");
                     }
@@ -63,72 +67,64 @@
                 }
             }
 
-            // Функція для оновлення посилань
+            // Отримання bid з URL
+            const bid = getBidFromURL();
+            const type = "creditCard"; // Тип номера (creditCard, student, business)
+
+            if (bid) {
+                loadOffer(bid, type); // Викликаємо функцію тільки якщо bid знайдено
+            } else {
+                console.log("BID не знайдено в URL");
+            }
+
+            // Функція для оновлення всіх посилань з певним id
             function updateLinksWithPhone() {
-                const phoneNumber = localStorage.getItem("creditCardPhone");
+                const phoneNumber = localStorage.getItem("creditCardPhone"); // Отримання номера з localStorage
                 if (!phoneNumber) {
                     console.log("Номер телефону відсутній у localStorage");
                     return;
                 }
 
-                document.querySelectorAll("#phoneLink").forEach((link) => {
-                    link.href = `tel:` + phoneNumber;
+                // Знаходимо всі посилання з id, наприклад, "phoneLink"
+                const links = document.querySelectorAll("#phoneLink");
+
+                links.forEach((link) => {
+                    link.href = `tel:` + phoneNumber; // Оновлюємо посилання
                 });
 
                 console.log("Посилання оновлено з номером:", phoneNumber);
             }
 
-            // Функція для ініціалізації MarketCall
-            function loadMarketCallScript() {
-                return new Promise((resolve) => {
-                    (function (w, d, s, o, f, js, fjs) {
-                        w[o] =
-                            w[o] ||
-                            function () {
-                                (w[o].q = w[o].q || []).push(arguments);
-                            };
-                        (js = d.createElement(s)),
-                            (fjs = d.getElementsByTagName(s)[0]);
-                        js.id = o;
-                        js.src = f;
-                        js.async = 1;
-                        js.onload = resolve; // Дочікуємося завантаження
-                        fjs.parentNode.insertBefore(js, fjs);
-                    })(
-                        window,
-                        document,
-                        "script",
-                        "mcc",
-                        "https://marketcall.com/js/mc-calltracking.js"
-                    );
-                });
-            }
+            // Викликати функцію після завантаження сторінки
+            document.addEventListener("DOMContentLoaded", updateLinksWithPhone);
+        </script>
 
-            // Основна асинхронна функція
-            async function init() {
-                const bid = getBidFromURL();
-                if (bid) {
-                    await loadOffer(bid); // Завантажуємо офери
-                } else {
-                    console.log("BID не знайдено в URL");
-                }
+        <script>
+            (function (w, d, s, o, f, js, fjs) {
+                w[o] =
+                    w[o] ||
+                    function () {
+                        (w[o].q = w[o].q || []).push(arguments);
+                    };
+                (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+                js.id = o;
+                js.src = f;
+                js.async = 1;
+                fjs.parentNode.insertBefore(js, fjs);
+            })(
+                window,
+                document,
+                "script",
+                "mcc",
+                "https://marketcall.com/js/mc-calltracking.js"
+            );
+            mcc("init", { site: 816, serviceBaseUrl: "//www.marketcall.com" });
 
-                updateLinksWithPhone(); // Оновлюємо посилання
-
-                await loadMarketCallScript(); // Завантажуємо MarketCall
-                mcc("init", {
-                    site: 816,
-                    serviceBaseUrl: "//www.marketcall.com",
-                });
-
-                mcc("requestTrackingNumber", {
-                    campaign: "309874",
-                    mask: "(xxx) xxx-xx-xx",
-                    subid: "{subid}",
-                });
-            }
-
-            document.addEventListener("DOMContentLoaded", init);
+            mcc("requestTrackingNumber", {
+                campaign: "309874",
+                mask: "(xxx) xxx-xx-xx",
+                subid: "{subid}",
+            });
         </script>
     </head>
     <body>
