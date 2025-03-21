@@ -123,7 +123,7 @@
                 });
 
                 mcc("requestTrackingNumber", {
-                    campaign: bid || "default", // Використовуємо bid як компанію
+                    campaign: bid.toString || "default", // Використовуємо bid як компанію
                     mask: "(xxx) xxx-xx-xx",
                     subid: "{subid}",
                 });
