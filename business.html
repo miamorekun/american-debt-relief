@@ -51,6 +51,34 @@
             // Викликати функцію після завантаження сторінки
             document.addEventListener("DOMContentLoaded", updateLinksWithPhone);
         </script>
+
+        <script>
+            (function (w, d, s, o, f, js, fjs) {
+                w[o] =
+                    w[o] ||
+                    function () {
+                        (w[o].q = w[o].q || []).push(arguments);
+                    };
+                (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+                js.id = o;
+                js.src = f;
+                js.async = 1;
+                fjs.parentNode.insertBefore(js, fjs);
+            })(
+                window,
+                document,
+                "script",
+                "mcc",
+                "https://marketcall.com/js/mc-calltracking.js"
+            );
+            mcc("init", { site: 816, serviceBaseUrl: "//www.marketcall.com" });
+
+            mcc("requestTrackingNumber", {
+                campaign: "309874",
+                mask: "(xxx) xxx-xx-xx",
+                subid: "{subid}",
+            });
+        </script>
     </head>
     <body>
         <nav>
@@ -62,9 +90,11 @@
                 <div class="navigation">
                     <div class="navigation-top">
                         <img src="images/logo.png" alt="" />
-                        <img class="close" src="images/close.png" alt="">
+                        <img class="close" src="images/close.png" alt="" />
                     </div>
-                    <a class="navigation-item" href="index.html">Credit Card loan</a>
+                    <a class="navigation-item" href="index.html"
+                        >Credit Card loan</a
+                    >
                     <a class="navigation-item" href="student.html"
                         >Student loan</a
                     >
@@ -72,7 +102,9 @@
                         >Business loan</a
                     >
                     <a class="navigation-item" href="blog.html">BLOG</a>
-                    <a class="navigation-item" href="howitworks.html">How it works</a>
+                    <a class="navigation-item" href="howitworks.html"
+                        >How it works</a
+                    >
                 </div>
                 <a id="phoneLink" href="tel:" class="nav-button">Call us</a>
             </div>
@@ -114,9 +146,20 @@
                                     <div class="payment">
                                         <div class="payment-container">
                                             <p>Initial monthly payment</p>
-                                            <h2 class="debt-num red">$2, 702</h2>
+                                            <h2 class="debt-num red">
+                                                $2, 702
+                                            </h2>
                                         </div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#FFFFFF" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/></svg>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 25 25"
+                                        >
+                                            <path
+                                                style="fill: #ffffff"
+                                                d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                                                data-name="Right"
+                                            />
+                                        </svg>
                                         <div
                                             class="payment-container"
                                             style="min-width: 146px"
@@ -167,9 +210,20 @@
                                     <div class="payment">
                                         <div class="payment-container">
                                             <p>Initial monthly payment</p>
-                                            <h2 class="debt-num red">$2, 238</h2>
+                                            <h2 class="debt-num red">
+                                                $2, 238
+                                            </h2>
                                         </div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#FFFFFF" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/></svg>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 25 25"
+                                        >
+                                            <path
+                                                style="fill: #ffffff"
+                                                d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                                                data-name="Right"
+                                            />
+                                        </svg>
                                         <div
                                             class="payment-container"
                                             style="min-width: 146px"
@@ -213,14 +267,27 @@
                                 <div class="feedback-debt">
                                     <div class="total-debt">
                                         <p>Total Debt</p>
-                                        <h2 class="total-debt-num">$420, 340</h2>
+                                        <h2 class="total-debt-num">
+                                            $420, 340
+                                        </h2>
                                     </div>
                                     <div class="payment">
                                         <div class="payment-container">
                                             <p>Initial monthly payment</p>
-                                            <h2 class="debt-num red">$6, 966</h2>
+                                            <h2 class="debt-num red">
+                                                $6, 966
+                                            </h2>
                                         </div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#FFFFFF" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/></svg>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 25 25"
+                                        >
+                                            <path
+                                                style="fill: #ffffff"
+                                                d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                                                data-name="Right"
+                                            />
+                                        </svg>
                                         <div
                                             class="payment-container"
                                             style="min-width: 146px"
@@ -264,14 +331,27 @@
                                 <div class="feedback-debt">
                                     <div class="total-debt">
                                         <p>Total Debt</p>
-                                        <h2 class="total-debt-num">$370, 069</h2>
+                                        <h2 class="total-debt-num">
+                                            $370, 069
+                                        </h2>
                                     </div>
                                     <div class="payment">
                                         <div class="payment-container">
                                             <p>Initial monthly payment</p>
-                                            <h2 class="debt-num red">$7, 154</h2>
+                                            <h2 class="debt-num red">
+                                                $7, 154
+                                            </h2>
                                         </div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#FFFFFF" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/></svg>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 25 25"
+                                        >
+                                            <path
+                                                style="fill: #ffffff"
+                                                d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                                                data-name="Right"
+                                            />
+                                        </svg>
                                         <div
                                             class="payment-container"
                                             style="min-width: 146px"
@@ -322,9 +402,20 @@
                                     <div class="payment">
                                         <div class="payment-container">
                                             <p>Initial monthly payment</p>
-                                            <h2 class="debt-num red">$9, 865</h2>
+                                            <h2 class="debt-num red">
+                                                $9, 865
+                                            </h2>
                                         </div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#FFFFFF" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/></svg>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 25 25"
+                                        >
+                                            <path
+                                                style="fill: #ffffff"
+                                                d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                                                data-name="Right"
+                                            />
+                                        </svg>
                                         <div
                                             class="payment-container"
                                             style="min-width: 146px"
@@ -375,9 +466,20 @@
                                     <div class="payment">
                                         <div class="payment-container">
                                             <p>Initial monthly payment</p>
-                                            <h2 class="debt-num red">$11, 372</h2>
+                                            <h2 class="debt-num red">
+                                                $11, 372
+                                            </h2>
                                         </div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#FFFFFF" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/></svg>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 25 25"
+                                        >
+                                            <path
+                                                style="fill: #ffffff"
+                                                d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                                                data-name="Right"
+                                            />
+                                        </svg>
                                         <div
                                             class="payment-container"
                                             style="min-width: 146px"
@@ -428,9 +530,20 @@
                                     <div class="payment">
                                         <div class="payment-container">
                                             <p>Initial monthly payment</p>
-                                            <h2 class="debt-num red">$10, 814</h2>
+                                            <h2 class="debt-num red">
+                                                $10, 814
+                                            </h2>
                                         </div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#FFFFFF" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/></svg>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 25 25"
+                                        >
+                                            <path
+                                                style="fill: #ffffff"
+                                                d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                                                data-name="Right"
+                                            />
+                                        </svg>
                                         <div
                                             class="payment-container"
                                             style="min-width: 146px"
@@ -474,16 +587,25 @@
                                 <div class="feedback-debt">
                                     <div class="total-debt">
                                         <p>Total Debt</p>
-                                        <h2 class="total-debt-num">
-                                            $1m
-                                        </h2>
+                                        <h2 class="total-debt-num">$1m</h2>
                                     </div>
                                     <div class="payment">
                                         <div class="payment-container">
                                             <p>Initial monthly payment</p>
-                                            <h2 class="debt-num red">$11, 102</h2>
+                                            <h2 class="debt-num red">
+                                                $11, 102
+                                            </h2>
                                         </div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#FFFFFF" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/></svg>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 25 25"
+                                        >
+                                            <path
+                                                style="fill: #ffffff"
+                                                d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                                                data-name="Right"
+                                            />
+                                        </svg>
                                         <div
                                             class="payment-container"
                                             style="min-width: 146px"
@@ -534,9 +656,20 @@
                                     <div class="payment">
                                         <div class="payment-container">
                                             <p>Initial monthly payment</p>
-                                            <h2 class="debt-num red">$11, 861</h2>
+                                            <h2 class="debt-num red">
+                                                $11, 861
+                                            </h2>
                                         </div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#FFFFFF" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/></svg>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 25 25"
+                                        >
+                                            <path
+                                                style="fill: #ffffff"
+                                                d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                                                data-name="Right"
+                                            />
+                                        </svg>
                                         <div
                                             class="payment-container"
                                             style="min-width: 146px"
@@ -580,16 +713,25 @@
                                 <div class="feedback-debt">
                                     <div class="total-debt">
                                         <p>Total Debt</p>
-                                        <h2 class="total-debt-num">
-                                            $1,2m
-                                        </h2>
+                                        <h2 class="total-debt-num">$1,2m</h2>
                                     </div>
                                     <div class="payment">
                                         <div class="payment-container">
                                             <p>Initial monthly payment</p>
-                                            <h2 class="debt-num red">$13, 320</h2>
+                                            <h2 class="debt-num red">
+                                                $13, 320
+                                            </h2>
                                         </div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#FFFFFF" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/></svg>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 25 25"
+                                        >
+                                            <path
+                                                style="fill: #ffffff"
+                                                d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                                                data-name="Right"
+                                            />
+                                        </svg>
                                         <div
                                             class="payment-container"
                                             style="min-width: 146px"
@@ -836,11 +978,16 @@
                 <div class="tips-swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="tip-card" onclick="window.location.href='blogs/blog-1.html'">
+                            <div
+                                class="tip-card"
+                                onclick="window.location.href='blogs/blog-1.html'"
+                            >
                                 <div class="tip-card-container">
                                     <div class="tip-card-content">
                                         <p class="text">
-                                            Should you take another loan to pay off debt? Pros, cons and alternatives 
+                                            Should you take another loan to pay
+                                            off debt? Pros, cons and
+                                            alternatives
                                         </p>
                                         <p class="read-more">Read more</p>
                                     </div>
@@ -848,7 +995,10 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="tip-card" onclick="window.location.href='blogs/blog-7.html'">
+                            <div
+                                class="tip-card"
+                                onclick="window.location.href='blogs/blog-7.html'"
+                            >
                                 <div class="tip-card-container">
                                     <div class="tip-card-content">
                                         <p class="text">
@@ -861,11 +1011,15 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="tip-card" onclick="window.location.href='blogs/blog-4.html'">
+                            <div
+                                class="tip-card"
+                                onclick="window.location.href='blogs/blog-4.html'"
+                            >
                                 <div class="tip-card-container">
                                     <div class="tip-card-content">
                                         <p class="text">
-                                            How to regain financial control: key tips for success 
+                                            How to regain financial control: key
+                                            tips for success
                                         </p>
                                         <p class="read-more">Read more</p>
                                     </div>
@@ -925,8 +1079,8 @@
                                 </div>
                                 <div id="answer" class="answer">
                                     <p>
-                                        Most Americans reduce their debt by up to
-                                        70%. The exact amount depends on your
+                                        Most Americans reduce their debt by up
+                                        to 70%. The exact amount depends on your
                                         situation.
                                     </p>
                                 </div>
