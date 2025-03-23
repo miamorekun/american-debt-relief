@@ -1,1197 +1,1209 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>American Debt Relief</title>
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/style.min.css" />
-        <link
-            rel="icon"
-            type="image/x-icon"
-            href="https://usfinancerelief.org/wp-content/uploads/2024/04/cropped-icon-32x32.png"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-        />
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>American Debt Relief</title>
+		<link
+			rel="stylesheet"
+			href="css/style.css" />
+		<link
+			rel="stylesheet"
+			href="css/style.min.css" />
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="https://usfinancerelief.org/wp-content/uploads/2024/04/cropped-icon-32x32.png" />
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-        <script src="scripts/header-swiper.js" type="module"></script>
-        <script src="scripts/tips-swapper.js" type="module"></script>
-        <script src="scripts/reviews.js" type="module"></script>
-        <script src="scripts/faq-list.js" type="module"></script>
-        <script src="scripts/mobile-menu.js" type="module"></script>
+		<script
+			src="scripts/header-swiper.js"
+			type="module"></script>
+		<script
+			src="scripts/tips-swapper.js"
+			type="module"></script>
+		<script
+			src="scripts/reviews.js"
+			type="module"></script>
+		<script
+			src="scripts/faq-list.js"
+			type="module"></script>
+		<script
+			src="scripts/mobile-menu.js"
+			type="module"></script>
 
-        <script>
-            // Функція для оновлення всіх посилань з певним id
-            function updateLinksWithPhone() {
-                const phoneNumber = localStorage.getItem("studentPhone"); // Отримання номера з localStorage
-                if (!phoneNumber) {
-                    console.log("Номер телефону відсутній у localStorage");
-                    return;
-                }
+		<script>
+			// Функція для оновлення всіх посилань з певним id
+			function updateLinksWithPhone() {
+				const phoneNumber = localStorage.getItem("studentPhone") // Отримання номера з localStorage
+				if (!phoneNumber) {
+					console.log("Номер телефону відсутній у localStorage")
+					return
+				}
 
-                // Знаходимо всі посилання з id, наприклад, "phoneLink"
-                const links = document.querySelectorAll("#phoneLink");
+				// Знаходимо всі посилання з id, наприклад, "phoneLink"
+				const links = document.querySelectorAll("#phoneLink")
 
-                links.forEach((link) => {
-                    link.href = `tel:` + phoneNumber; // Оновлюємо посилання
-                });
+				links.forEach((link) => {
+					link.href = `tel:` + phoneNumber // Оновлюємо посилання
+				})
 
-                console.log("Посилання оновлено з номером:", phoneNumber);
-            }
+				console.log("Посилання оновлено з номером:", phoneNumber)
+			}
 
-            // Викликати функцію після завантаження сторінки
-            document.addEventListener("DOMContentLoaded", updateLinksWithPhone);
-        </script>
+			// Викликати функцію після завантаження сторінки
+			document.addEventListener("DOMContentLoaded", updateLinksWithPhone)
+		</script>
 
-        <script>
-            (function (w, d, s, o, f, js, fjs) {
-                w[o] =
-                    w[o] ||
-                    function () {
-                        (w[o].q = w[o].q || []).push(arguments);
-                    };
-                (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
-                js.id = o;
-                js.src = f;
-                js.async = 1;
-                fjs.parentNode.insertBefore(js, fjs);
-            })(
-                window,
-                document,
-                "script",
-                "mcc",
-                "https://marketcall.com/js/mc-calltracking.js"
-            );
-            mcc("init", { site: 816, serviceBaseUrl: "//www.marketcall.com" });
+		<script>
+			;(function (w, d, s, o, f, js, fjs) {
+				w[o] =
+					w[o] ||
+					function () {
+						;(w[o].q = w[o].q || []).push(arguments)
+					}
+				;(js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0])
+				js.id = o
+				js.src = f
+				js.async = 1
+				fjs.parentNode.insertBefore(js, fjs)
+			})(window, document, "script", "mcc", "https://marketcall.com/js/mc-calltracking.js")
+			mcc("init", {site: 816, serviceBaseUrl: "//www.marketcall.com"})
 
-            mcc("requestTrackingNumber", {
-                campaign: "309874",
-                mask: "(xxx) xxx-xx-xx",
-                subid: "{subid}",
-            });
-        </script>
-    </head>
-    <body>
-        <nav>
-            <div class="nav-container">
-                <img class="burger-menu" src="images/burger menu.png" alt="" />
-                <a href="index.html">
-                    <img src="images/logo.png" alt="" />
-                </a>
-                <div class="navigation">
-                    <div class="navigation-top">
-                        <img src="images/logo.png" alt="" />
-                        <img class="close" src="images/close.png" alt="" />
-                    </div>
-                    <a class="navigation-item" href="index.html"
-                        >Credit Card loan</a
-                    >
-                    <a class="navigation-item active" href="student.html"
-                        >Student loan</a
-                    >
-                    <a class="navigation-item" href="business.html"
-                        >Business loan</a
-                    >
-                    <a class="navigation-item" href="blog.html">BLOG</a>
-                    <a class="navigation-item" href="howitworks.html"
-                        >How it works</a
-                    >
-                </div>
-                <a id="phoneLink" href="tel:" class="nav-button">Call us</a>
-            </div>
-        </nav>
-        <a href="support.html" class="support-button">
-            <img src="images/support icon.png" alt="" />
-        </a>
-        <header>
-            <div class="header-swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="feedback-card">
-                            <div class="left-side">
-                                <img
-                                    src="images/students/student-1.jpg"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="right-side">
-                                <p class="feedback-name">Emma L.</p>
-                                <p class="feedback-content">
-                                    “I trusted them with my student loans, and
-                                    now I’m finally on track!”
-                                </p>
-                                <a href="form.html" class="feedback-button">
-                                    Apply now
-                                    <img
-                                        src="images/arrows right circle.png"
-                                        alt=""
-                                    />
-                                </a>
-                                <div class="feedback-debt">
-                                    <div class="total-debt">
-                                        <p>Total Debt</p>
-                                        <h2 class="total-debt-num">$48, 500</h2>
-                                    </div>
-                                    <div class="payment">
-                                        <div class="payment-container">
-                                            <p>Initial monthly payment</p>
-                                            <h2 class="debt-num red">
-                                                $2, 149
-                                            </h2>
-                                        </div>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 25 25"
-                                        >
-                                            <path
-                                                style="fill: #ffffff"
-                                                d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                                                data-name="Right"
-                                            />
-                                        </svg>
-                                        <div
-                                            class="payment-container"
-                                            style="min-width: 146px"
-                                        >
-                                            <p>Monthly payment</p>
-                                            <h2 class="debt-num">$1, 150</h2>
-                                        </div>
-                                    </div>
-                                    <div class="payment-container">
-                                        <p>Debt paid in</p>
-                                        <h2 class="debt-num">24 months</h2>
-                                    </div>
-                                </div>
-                                <h2 class="feedback-conclusion">
-                                    Emma saved 28% on her debts
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="feedback-card">
-                            <div class="left-side">
-                                <img
-                                    src="images/students/student-2.jpg"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="right-side">
-                                <p class="feedback-name">Michael R.</p>
-                                <p class="feedback-content">
-                                    “They helped me manage my student loans, and
-                                    now I can focus on my studies!”
-                                </p>
-                                <a href="form.html" class="feedback-button">
-                                    Apply now
-                                    <img
-                                        src="images/arrows right circle.png"
-                                        alt=""
-                                    />
-                                </a>
-                                <div class="feedback-debt">
-                                    <div class="total-debt">
-                                        <p>Total Debt</p>
-                                        <h2 class="total-debt-num">$60, 800</h2>
-                                    </div>
-                                    <div class="payment">
-                                        <div class="payment-container">
-                                            <p>Initial monthly payment</p>
-                                            <h2 class="debt-num red">
-                                                $2, 819
-                                            </h2>
-                                        </div>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 25 25"
-                                        >
-                                            <path
-                                                style="fill: #ffffff"
-                                                d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                                                data-name="Right"
-                                            />
-                                        </svg>
-                                        <div
-                                            class="payment-container"
-                                            style="min-width: 146px"
-                                        >
-                                            <p>Monthly payment</p>
-                                            <h2 class="debt-num">$1, 210</h2>
-                                        </div>
-                                    </div>
-                                    <div class="payment-container">
-                                        <p>Debt paid in</p>
-                                        <h2 class="debt-num">48 months</h2>
-                                    </div>
-                                </div>
-                                <h2 class="feedback-conclusion">
-                                    Michael saved 30% on his debts
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="feedback-card">
-                            <div class="left-side">
-                                <img
-                                    src="images/students/student-3.jpg"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="right-side">
-                                <p class="feedback-name">Sophia M.</p>
-                                <p class="feedback-content">
-                                    “Student loans were overwhelming, but they
-                                    made it manageable. Thank you!”
-                                </p>
-                                <a href="form.html" class="feedback-button">
-                                    Apply now
-                                    <img
-                                        src="images/arrows right circle.png"
-                                        alt=""
-                                    />
-                                </a>
-                                <div class="feedback-debt">
-                                    <div class="total-debt">
-                                        <p>Total Debt</p>
-                                        <h2 class="total-debt-num">$66, 000</h2>
-                                    </div>
-                                    <div class="payment">
-                                        <div class="payment-container">
-                                            <p>Initial monthly payment</p>
-                                            <h2 class="debt-num red">
-                                                $2, 925
-                                            </h2>
-                                        </div>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 25 25"
-                                        >
-                                            <path
-                                                style="fill: #ffffff"
-                                                d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                                                data-name="Right"
-                                            />
-                                        </svg>
-                                        <div
-                                            class="payment-container"
-                                            style="min-width: 146px"
-                                        >
-                                            <p>Monthly payment</p>
-                                            <h2 class="debt-num">$1, 450</h2>
-                                        </div>
-                                    </div>
-                                    <div class="payment-container">
-                                        <p>Debt paid in</p>
-                                        <h2 class="debt-num">24 months</h2>
-                                    </div>
-                                </div>
-                                <h2 class="feedback-conclusion">
-                                    Sophia saved 27% on her debts
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="feedback-card">
-                            <div class="left-side">
-                                <img
-                                    src="images/students/student-4.jpg"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="right-side">
-                                <p class="feedback-name">David S.</p>
-                                <p class="feedback-content">
-                                    “They helped me lower my payments, and now I
-                                    can breathe easy!”
-                                </p>
-                                <a href="form.html" class="feedback-button">
-                                    Apply now
-                                    <img
-                                        src="images/arrows right circle.png"
-                                        alt=""
-                                    />
-                                </a>
-                                <div class="feedback-debt">
-                                    <div class="total-debt">
-                                        <p>Total Debt</p>
-                                        <h2 class="total-debt-num">
-                                            $101, 800
-                                        </h2>
-                                    </div>
-                                    <div class="payment">
-                                        <div class="payment-container">
-                                            <p>Initial monthly payment</p>
-                                            <h2 class="debt-num red">
-                                                $3, 096
-                                            </h2>
-                                        </div>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 25 25"
-                                        >
-                                            <path
-                                                style="fill: #ffffff"
-                                                d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                                                data-name="Right"
-                                            />
-                                        </svg>
-                                        <div
-                                            class="payment-container"
-                                            style="min-width: 146px"
-                                        >
-                                            <p>Monthly payment</p>
-                                            <h2 class="debt-num">$1, 600</h2>
-                                        </div>
-                                    </div>
-                                    <div class="payment-container">
-                                        <p>Debt paid in</p>
-                                        <h2 class="debt-num">36 months</h2>
-                                    </div>
-                                </div>
-                                <h2 class="feedback-conclusion">
-                                    David saved 35% on his debts
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="feedback-card">
-                            <div class="left-side">
-                                <img
-                                    src="images/students/student-5.jpg"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="right-side">
-                                <p class="feedback-name">Ann S.</p>
-                                <p class="feedback-content">
-                                    “I was struggling with student debt, but
-                                    they found the perfect solution!”
-                                </p>
-                                <a href="form.html" class="feedback-button">
-                                    Apply now
-                                    <img
-                                        src="images/arrows right circle.png"
-                                        alt=""
-                                    />
-                                </a>
-                                <div class="feedback-debt">
-                                    <div class="total-debt">
-                                        <p>Total Debt</p>
-                                        <h2 class="total-debt-num">$91, 200</h2>
-                                    </div>
-                                    <div class="payment">
-                                        <div class="payment-container">
-                                            <p>Initial monthly payment</p>
-                                            <h2 class="debt-num red">
-                                                $4, 042
-                                            </h2>
-                                        </div>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 25 25"
-                                        >
-                                            <path
-                                                style="fill: #ffffff"
-                                                d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                                                data-name="Right"
-                                            />
-                                        </svg>
-                                        <div
-                                            class="payment-container"
-                                            style="min-width: 146px"
-                                        >
-                                            <p>Monthly payment</p>
-                                            <h2 class="debt-num">$1, 920</h2>
-                                        </div>
-                                    </div>
-                                    <div class="payment-container">
-                                        <p>Debt paid in</p>
-                                        <h2 class="debt-num">24 months</h2>
-                                    </div>
-                                </div>
-                                <h2 class="feedback-conclusion">
-                                    Ann saved 29% on her debts
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="feedback-card">
-                            <div class="left-side">
-                                <img
-                                    src="images/students/student-6.jpg"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="right-side">
-                                <p class="feedback-name">Damon S.</p>
-                                <p class="feedback-content">
-                                    “Thanks to them, my student loans are
-                                    finally under control!”
-                                </p>
-                                <a href="form.html" class="feedback-button">
-                                    Apply now
-                                    <img
-                                        src="images/arrows right circle.png"
-                                        alt=""
-                                    />
-                                </a>
-                                <div class="feedback-debt">
-                                    <div class="total-debt">
-                                        <p>Total Debt</p>
-                                        <h2 class="total-debt-num">
-                                            $114, 400
-                                        </h2>
-                                    </div>
-                                    <div class="payment">
-                                        <div class="payment-container">
-                                            <p>Initial monthly payment</p>
-                                            <h2 class="debt-num red">
-                                                $2, 686
-                                            </h2>
-                                        </div>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 25 25"
-                                        >
-                                            <path
-                                                style="fill: #ffffff"
-                                                d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                                                data-name="Right"
-                                            />
-                                        </svg>
-                                        <div
-                                            class="payment-container"
-                                            style="min-width: 146px"
-                                        >
-                                            <p>Monthly payment</p>
-                                            <h2 class="debt-num">$950</h2>
-                                        </div>
-                                    </div>
-                                    <div class="payment-container">
-                                        <p>Debt paid in</p>
-                                        <h2 class="debt-num">48 months</h2>
-                                    </div>
-                                </div>
-                                <h2 class="feedback-conclusion">
-                                    Damon saved 31% on his debts
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="feedback-card">
-                            <div class="left-side">
-                                <img
-                                    src="images/students/student-7.jpg"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="right-side">
-                                <p class="feedback-name">Isabella W.</p>
-                                <p class="feedback-content">
-                                    “Student loans were stressing me out, but
-                                    they made it all manageable!”
-                                </p>
-                                <a href="form.html" class="feedback-button">
-                                    Apply now
-                                    <img
-                                        src="images/arrows right circle.png"
-                                        alt=""
-                                    />
-                                </a>
-                                <div class="feedback-debt">
-                                    <div class="total-debt">
-                                        <p>Total Debt</p>
-                                        <h2 class="total-debt-num">$72, 000</h2>
-                                    </div>
-                                    <div class="payment">
-                                        <div class="payment-container">
-                                            <p>Initial monthly payment</p>
-                                            <h2 class="debt-num red">
-                                                $3, 191
-                                            </h2>
-                                        </div>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 25 25"
-                                        >
-                                            <path
-                                                style="fill: #ffffff"
-                                                d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                                                data-name="Right"
-                                            />
-                                        </svg>
-                                        <div
-                                            class="payment-container"
-                                            style="min-width: 146px"
-                                        >
-                                            <p>Monthly payment</p>
-                                            <h2 class="debt-num">$1, 780</h2>
-                                        </div>
-                                    </div>
-                                    <div class="payment-container">
-                                        <p>Debt paid in</p>
-                                        <h2 class="debt-num">24 months</h2>
-                                    </div>
-                                </div>
-                                <h2 class="feedback-conclusion">
-                                    Isabella saved 26% on her debts
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="feedback-card">
-                            <div class="left-side">
-                                <img
-                                    src="images/students/student-8.jpg"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="right-side">
-                                <p class="feedback-name">Lucas J.</p>
-                                <p class="feedback-content">
-                                    “I couldn’t keep up with loans, but they
-                                    helped me lower the payments!”
-                                </p>
-                                <a href="form.html" class="feedback-button">
-                                    Apply now
-                                    <img
-                                        src="images/arrows right circle.png"
-                                        alt=""
-                                    />
-                                </a>
-                                <div class="feedback-debt">
-                                    <div class="total-debt">
-                                        <p>Total Debt</p>
-                                        <h2 class="total-debt-num">
-                                            $124, 100
-                                        </h2>
-                                    </div>
-                                    <div class="payment">
-                                        <div class="payment-container">
-                                            <p>Initial monthly payment</p>
-                                            <h2 class="debt-num red">
-                                                $2, 399
-                                            </h2>
-                                        </div>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 25 25"
-                                        >
-                                            <path
-                                                style="fill: #ffffff"
-                                                d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                                                data-name="Right"
-                                            />
-                                        </svg>
-                                        <div
-                                            class="payment-container"
-                                            style="min-width: 146px"
-                                        >
-                                            <p>Monthly payment</p>
-                                            <h2 class="debt-num">$1, 000</h2>
-                                        </div>
-                                    </div>
-                                    <div class="payment-container">
-                                        <p>Debt paid in</p>
-                                        <h2 class="debt-num">60 months</h2>
-                                    </div>
-                                </div>
-                                <h2 class="feedback-conclusion">
-                                    Lucas saved 34% on his debts
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="feedback-card">
-                            <div class="left-side">
-                                <img
-                                    src="images/students/student-9.jpg"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="right-side">
-                                <p class="feedback-name">Ava T.</p>
-                                <p class="feedback-content">
-                                    “Thanks to them, I can finally focus on my
-                                    future instead of my debt!”
-                                </p>
-                                <a href="form.html" class="feedback-button">
-                                    Apply now
-                                    <img
-                                        src="images/arrows right circle.png"
-                                        alt=""
-                                    />
-                                </a>
-                                <div class="feedback-debt">
-                                    <div class="total-debt">
-                                        <p>Total Debt</p>
-                                        <h2 class="total-debt-num">$96, 200</h2>
-                                    </div>
-                                    <div class="payment">
-                                        <div class="payment-container">
-                                            <p>Initial monthly payment</p>
-                                            <h2 class="debt-num red">
-                                                $2, 926
-                                            </h2>
-                                        </div>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 25 25"
-                                        >
-                                            <path
-                                                style="fill: #ffffff"
-                                                d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                                                data-name="Right"
-                                            />
-                                        </svg>
-                                        <div
-                                            class="payment-container"
-                                            style="min-width: 146px"
-                                        >
-                                            <p>Monthly payment</p>
-                                            <h2 class="debt-num">$1, 690</h2>
-                                        </div>
-                                    </div>
-                                    <div class="payment-container">
-                                        <p>Debt paid in</p>
-                                        <h2 class="debt-num">36 months</h2>
-                                    </div>
-                                </div>
-                                <h2 class="feedback-conclusion">
-                                    Ava saved 30% on her debts
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="feedback-card">
-                            <div class="left-side">
-                                <img
-                                    src="images/students/student-10.jpg"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="right-side">
-                                <p class="feedback-name">Benjamin C.</p>
-                                <p class="feedback-content">
-                                    “Their support made repaying my student
-                                    loans so much easier. I’m beyond grateful!”
-                                </p>
-                                <a href="form.html" class="feedback-button">
-                                    Apply now
-                                    <img
-                                        src="images/arrows right circle.png"
-                                        alt=""
-                                    />
-                                </a>
-                                <div class="feedback-debt">
-                                    <div class="total-debt">
-                                        <p>Total Debt</p>
-                                        <h2 class="total-debt-num">
-                                            $111, 400
-                                        </h2>
-                                    </div>
-                                    <div class="payment">
-                                        <div class="payment-container">
-                                            <p>Initial monthly payment</p>
-                                            <h2 class="debt-num red">
-                                                $2, 616
-                                            </h2>
-                                        </div>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 25 25"
-                                        >
-                                            <path
-                                                style="fill: #ffffff"
-                                                d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                                                data-name="Right"
-                                            />
-                                        </svg>
-                                        <div
-                                            class="payment-container"
-                                            style="min-width: 146px"
-                                        >
-                                            <p>Monthly payment</p>
-                                            <h2 class="debt-num">$1, 720</h2>
-                                        </div>
-                                    </div>
-                                    <div class="payment-container">
-                                        <p>Debt paid in</p>
-                                        <h2 class="debt-num">48 months</h2>
-                                    </div>
-                                </div>
-                                <h2 class="feedback-conclusion">
-                                    Benjamin saved 33% on his debts
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-buttons">
-                    <div class="swiper-button-next">
-                        <img src="images/swiper-right.png" alt="" />
-                    </div>
-                    <div class="swiper-button-prev">
-                        <img src="images/swiper-left.png" alt="" />
-                    </div>
-                </div>
-            </div>
-        </header>
-        <main>
-            <section>
-                <h2>Find Out How Much You Can Save on Debt Relief</h2>
-                <form action="">
-                    <label class="checkbox-container"
-                        >Get a personalized debt reduction estimate
-                        <input type="checkbox" checked disabled />
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="checkbox-container"
-                        >Discover how soon you can regain financial freedom
-                        <input type="checkbox" checked disabled />
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="checkbox-container"
-                        >No fees until your accounts are settled
-                        <input type="checkbox" checked disabled />
-                        <span class="checkmark"></span>
-                    </label>
+			mcc("requestTrackingNumber", {
+				campaign: "309874",
+				mask: "(xxx) xxx-xx-xx",
+				subid: "{subid}",
+			})
+		</script>
+	</head>
+	<body>
+		<nav>
+			<div class="nav-container">
+				<img
+					loading="lazy"
+					class="burger-menu"
+					src="images/burger menu.png"
+					alt="" />
+				<a href="index.html">
+					<img
+						loading="lazy"
+						src="images/logo.png"
+						alt="" />
+				</a>
+				<div class="navigation">
+					<div class="navigation-top">
+						<img
+							loading="lazy"
+							src="images/logo.png"
+							alt="" />
+						<img
+							loading="lazy"
+							class="close"
+							src="images/close.png"
+							alt="" />
+					</div>
+					<a
+						class="navigation-item"
+						href="index.html"
+						>Credit Card loan</a
+					>
+					<a
+						class="navigation-item active"
+						href="student.html"
+						>Student loan</a
+					>
+					<a
+						class="navigation-item"
+						href="business.html"
+						>Business loan</a
+					>
+					<a
+						class="navigation-item"
+						href="blog.html"
+						>BLOG</a
+					>
+					<a
+						class="navigation-item"
+						href="howitworks.html"
+						>How it works</a
+					>
+				</div>
+				<a
+					id="phoneLink"
+					href="tel:"
+					class="nav-button"
+					>Call us</a
+				>
+			</div>
+		</nav>
+		<a
+			href="support.html"
+			class="support-button">
+			<img
+				loading="lazy"
+				src="images/support icon.png"
+				alt="" />
+		</a>
+		<header>
+			<div class="header-swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="feedback-card">
+							<div class="left-side">
+								<img
+									loading="lazy"
+									src="images/students/student-1.webp"
+									alt="" />
+							</div>
+							<div class="right-side">
+								<p class="feedback-name">Emma L.</p>
+								<p class="feedback-content">
+									“I trusted them with my student loans, and now I’m finally on track!”
+								</p>
+								<a
+									href="form.html"
+									class="feedback-button">
+									Apply now
+									<img
+										loading="lazy"
+										src="images/arrows right circle.png"
+										alt="" />
+								</a>
+								<div class="feedback-debt">
+									<div class="total-debt">
+										<p>Total Debt</p>
+										<h2 class="total-debt-num">$48, 500</h2>
+									</div>
+									<div class="payment">
+										<div class="payment-container">
+											<p>Initial monthly payment</p>
+											<h2 class="debt-num red">$2, 149</h2>
+										</div>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 25 25">
+											<path
+												style="fill: #ffffff"
+												d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+												data-name="Right" />
+										</svg>
+										<div
+											class="payment-container"
+											style="min-width: 146px">
+											<p>Monthly payment</p>
+											<h2 class="debt-num">$1, 150</h2>
+										</div>
+									</div>
+									<div class="payment-container">
+										<p>Debt paid in</p>
+										<h2 class="debt-num">24 months</h2>
+									</div>
+								</div>
+								<h2 class="feedback-conclusion">Emma saved 28% on her debts</h2>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="feedback-card">
+							<div class="left-side">
+								<img
+									loading="lazy"
+									src="images/students/student-2.webp"
+									alt="" />
+							</div>
+							<div class="right-side">
+								<p class="feedback-name">Michael R.</p>
+								<p class="feedback-content">
+									“They helped me manage my student loans, and now I can focus on my studies!”
+								</p>
+								<a
+									href="form.html"
+									class="feedback-button">
+									Apply now
+									<img
+										loading="lazy"
+										src="images/arrows right circle.png"
+										alt="" />
+								</a>
+								<div class="feedback-debt">
+									<div class="total-debt">
+										<p>Total Debt</p>
+										<h2 class="total-debt-num">$60, 800</h2>
+									</div>
+									<div class="payment">
+										<div class="payment-container">
+											<p>Initial monthly payment</p>
+											<h2 class="debt-num red">$2, 819</h2>
+										</div>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 25 25">
+											<path
+												style="fill: #ffffff"
+												d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+												data-name="Right" />
+										</svg>
+										<div
+											class="payment-container"
+											style="min-width: 146px">
+											<p>Monthly payment</p>
+											<h2 class="debt-num">$1, 210</h2>
+										</div>
+									</div>
+									<div class="payment-container">
+										<p>Debt paid in</p>
+										<h2 class="debt-num">48 months</h2>
+									</div>
+								</div>
+								<h2 class="feedback-conclusion">Michael saved 30% on his debts</h2>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="feedback-card">
+							<div class="left-side">
+								<img
+									loading="lazy"
+									src="images/students/student-3.webp"
+									alt="" />
+							</div>
+							<div class="right-side">
+								<p class="feedback-name">Sophia M.</p>
+								<p class="feedback-content">
+									“Student loans were overwhelming, but they made it manageable. Thank you!”
+								</p>
+								<a
+									href="form.html"
+									class="feedback-button">
+									Apply now
+									<img
+										loading="lazy"
+										src="images/arrows right circle.png"
+										alt="" />
+								</a>
+								<div class="feedback-debt">
+									<div class="total-debt">
+										<p>Total Debt</p>
+										<h2 class="total-debt-num">$66, 000</h2>
+									</div>
+									<div class="payment">
+										<div class="payment-container">
+											<p>Initial monthly payment</p>
+											<h2 class="debt-num red">$2, 925</h2>
+										</div>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 25 25">
+											<path
+												style="fill: #ffffff"
+												d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+												data-name="Right" />
+										</svg>
+										<div
+											class="payment-container"
+											style="min-width: 146px">
+											<p>Monthly payment</p>
+											<h2 class="debt-num">$1, 450</h2>
+										</div>
+									</div>
+									<div class="payment-container">
+										<p>Debt paid in</p>
+										<h2 class="debt-num">24 months</h2>
+									</div>
+								</div>
+								<h2 class="feedback-conclusion">Sophia saved 27% on her debts</h2>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="feedback-card">
+							<div class="left-side">
+								<img
+									loading="lazy"
+									src="images/students/student-4.webp"
+									alt="" />
+							</div>
+							<div class="right-side">
+								<p class="feedback-name">David S.</p>
+								<p class="feedback-content">
+									“They helped me lower my payments, and now I can breathe easy!”
+								</p>
+								<a
+									href="form.html"
+									class="feedback-button">
+									Apply now
+									<img
+										loading="lazy"
+										src="images/arrows right circle.png"
+										alt="" />
+								</a>
+								<div class="feedback-debt">
+									<div class="total-debt">
+										<p>Total Debt</p>
+										<h2 class="total-debt-num">$101, 800</h2>
+									</div>
+									<div class="payment">
+										<div class="payment-container">
+											<p>Initial monthly payment</p>
+											<h2 class="debt-num red">$3, 096</h2>
+										</div>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 25 25">
+											<path
+												style="fill: #ffffff"
+												d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+												data-name="Right" />
+										</svg>
+										<div
+											class="payment-container"
+											style="min-width: 146px">
+											<p>Monthly payment</p>
+											<h2 class="debt-num">$1, 600</h2>
+										</div>
+									</div>
+									<div class="payment-container">
+										<p>Debt paid in</p>
+										<h2 class="debt-num">36 months</h2>
+									</div>
+								</div>
+								<h2 class="feedback-conclusion">David saved 35% on his debts</h2>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="feedback-card">
+							<div class="left-side">
+								<img
+									loading="lazy"
+									src="images/students/student-5.webp"
+									alt="" />
+							</div>
+							<div class="right-side">
+								<p class="feedback-name">Ann S.</p>
+								<p class="feedback-content">
+									“I was struggling with student debt, but they found the perfect solution!”
+								</p>
+								<a
+									href="form.html"
+									class="feedback-button">
+									Apply now
+									<img
+										loading="lazy"
+										src="images/arrows right circle.png"
+										alt="" />
+								</a>
+								<div class="feedback-debt">
+									<div class="total-debt">
+										<p>Total Debt</p>
+										<h2 class="total-debt-num">$91, 200</h2>
+									</div>
+									<div class="payment">
+										<div class="payment-container">
+											<p>Initial monthly payment</p>
+											<h2 class="debt-num red">$4, 042</h2>
+										</div>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 25 25">
+											<path
+												style="fill: #ffffff"
+												d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+												data-name="Right" />
+										</svg>
+										<div
+											class="payment-container"
+											style="min-width: 146px">
+											<p>Monthly payment</p>
+											<h2 class="debt-num">$1, 920</h2>
+										</div>
+									</div>
+									<div class="payment-container">
+										<p>Debt paid in</p>
+										<h2 class="debt-num">24 months</h2>
+									</div>
+								</div>
+								<h2 class="feedback-conclusion">Ann saved 29% on her debts</h2>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="feedback-card">
+							<div class="left-side">
+								<img
+									loading="lazy"
+									src="images/students/student-6.webp"
+									alt="" />
+							</div>
+							<div class="right-side">
+								<p class="feedback-name">Damon S.</p>
+								<p class="feedback-content">
+									“Thanks to them, my student loans are finally under control!”
+								</p>
+								<a
+									href="form.html"
+									class="feedback-button">
+									Apply now
+									<img
+										loading="lazy"
+										src="images/arrows right circle.png"
+										alt="" />
+								</a>
+								<div class="feedback-debt">
+									<div class="total-debt">
+										<p>Total Debt</p>
+										<h2 class="total-debt-num">$114, 400</h2>
+									</div>
+									<div class="payment">
+										<div class="payment-container">
+											<p>Initial monthly payment</p>
+											<h2 class="debt-num red">$2, 686</h2>
+										</div>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 25 25">
+											<path
+												style="fill: #ffffff"
+												d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+												data-name="Right" />
+										</svg>
+										<div
+											class="payment-container"
+											style="min-width: 146px">
+											<p>Monthly payment</p>
+											<h2 class="debt-num">$950</h2>
+										</div>
+									</div>
+									<div class="payment-container">
+										<p>Debt paid in</p>
+										<h2 class="debt-num">48 months</h2>
+									</div>
+								</div>
+								<h2 class="feedback-conclusion">Damon saved 31% on his debts</h2>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="feedback-card">
+							<div class="left-side">
+								<img
+									loading="lazy"
+									src="images/students/student-7.webp"
+									alt="" />
+							</div>
+							<div class="right-side">
+								<p class="feedback-name">Isabella W.</p>
+								<p class="feedback-content">
+									“Student loans were stressing me out, but they made it all manageable!”
+								</p>
+								<a
+									href="form.html"
+									class="feedback-button">
+									Apply now
+									<img
+										loading="lazy"
+										src="images/arrows right circle.png"
+										alt="" />
+								</a>
+								<div class="feedback-debt">
+									<div class="total-debt">
+										<p>Total Debt</p>
+										<h2 class="total-debt-num">$72, 000</h2>
+									</div>
+									<div class="payment">
+										<div class="payment-container">
+											<p>Initial monthly payment</p>
+											<h2 class="debt-num red">$3, 191</h2>
+										</div>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 25 25">
+											<path
+												style="fill: #ffffff"
+												d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+												data-name="Right" />
+										</svg>
+										<div
+											class="payment-container"
+											style="min-width: 146px">
+											<p>Monthly payment</p>
+											<h2 class="debt-num">$1, 780</h2>
+										</div>
+									</div>
+									<div class="payment-container">
+										<p>Debt paid in</p>
+										<h2 class="debt-num">24 months</h2>
+									</div>
+								</div>
+								<h2 class="feedback-conclusion">Isabella saved 26% on her debts</h2>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="feedback-card">
+							<div class="left-side">
+								<img
+									loading="lazy"
+									src="images/students/student-8.webp"
+									alt="" />
+							</div>
+							<div class="right-side">
+								<p class="feedback-name">Lucas J.</p>
+								<p class="feedback-content">
+									“I couldn’t keep up with loans, but they helped me lower the payments!”
+								</p>
+								<a
+									href="form.html"
+									class="feedback-button">
+									Apply now
+									<img
+										loading="lazy"
+										src="images/arrows right circle.png"
+										alt="" />
+								</a>
+								<div class="feedback-debt">
+									<div class="total-debt">
+										<p>Total Debt</p>
+										<h2 class="total-debt-num">$124, 100</h2>
+									</div>
+									<div class="payment">
+										<div class="payment-container">
+											<p>Initial monthly payment</p>
+											<h2 class="debt-num red">$2, 399</h2>
+										</div>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 25 25">
+											<path
+												style="fill: #ffffff"
+												d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+												data-name="Right" />
+										</svg>
+										<div
+											class="payment-container"
+											style="min-width: 146px">
+											<p>Monthly payment</p>
+											<h2 class="debt-num">$1, 000</h2>
+										</div>
+									</div>
+									<div class="payment-container">
+										<p>Debt paid in</p>
+										<h2 class="debt-num">60 months</h2>
+									</div>
+								</div>
+								<h2 class="feedback-conclusion">Lucas saved 34% on his debts</h2>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="feedback-card">
+							<div class="left-side">
+								<img
+									loading="lazy"
+									src="images/students/student-9.webp"
+									alt="" />
+							</div>
+							<div class="right-side">
+								<p class="feedback-name">Ava T.</p>
+								<p class="feedback-content">
+									“Thanks to them, I can finally focus on my future instead of my debt!”
+								</p>
+								<a
+									href="form.html"
+									class="feedback-button">
+									Apply now
+									<img
+										loading="lazy"
+										src="images/arrows right circle.png"
+										alt="" />
+								</a>
+								<div class="feedback-debt">
+									<div class="total-debt">
+										<p>Total Debt</p>
+										<h2 class="total-debt-num">$96, 200</h2>
+									</div>
+									<div class="payment">
+										<div class="payment-container">
+											<p>Initial monthly payment</p>
+											<h2 class="debt-num red">$2, 926</h2>
+										</div>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 25 25">
+											<path
+												style="fill: #ffffff"
+												d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+												data-name="Right" />
+										</svg>
+										<div
+											class="payment-container"
+											style="min-width: 146px">
+											<p>Monthly payment</p>
+											<h2 class="debt-num">$1, 690</h2>
+										</div>
+									</div>
+									<div class="payment-container">
+										<p>Debt paid in</p>
+										<h2 class="debt-num">36 months</h2>
+									</div>
+								</div>
+								<h2 class="feedback-conclusion">Ava saved 30% on her debts</h2>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="feedback-card">
+							<div class="left-side">
+								<img
+									loading="lazy"
+									src="images/students/student-10.webp"
+									alt="" />
+							</div>
+							<div class="right-side">
+								<p class="feedback-name">Benjamin C.</p>
+								<p class="feedback-content">
+									“Their support made repaying my student loans so much easier. I’m beyond
+									grateful!”
+								</p>
+								<a
+									href="form.html"
+									class="feedback-button">
+									Apply now
+									<img
+										loading="lazy"
+										src="images/arrows right circle.png"
+										alt="" />
+								</a>
+								<div class="feedback-debt">
+									<div class="total-debt">
+										<p>Total Debt</p>
+										<h2 class="total-debt-num">$111, 400</h2>
+									</div>
+									<div class="payment">
+										<div class="payment-container">
+											<p>Initial monthly payment</p>
+											<h2 class="debt-num red">$2, 616</h2>
+										</div>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 25 25">
+											<path
+												style="fill: #ffffff"
+												d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+												data-name="Right" />
+										</svg>
+										<div
+											class="payment-container"
+											style="min-width: 146px">
+											<p>Monthly payment</p>
+											<h2 class="debt-num">$1, 720</h2>
+										</div>
+									</div>
+									<div class="payment-container">
+										<p>Debt paid in</p>
+										<h2 class="debt-num">48 months</h2>
+									</div>
+								</div>
+								<h2 class="feedback-conclusion">Benjamin saved 33% on his debts</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-buttons">
+					<div class="swiper-button-next">
+						<img
+							loading="lazy"
+							src="images/swiper-right.png"
+							alt="" />
+					</div>
+					<div class="swiper-button-prev">
+						<img
+							loading="lazy"
+							src="images/swiper-left.png"
+							alt="" />
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section>
+				<h2>Find Out How Much You Can Save on Debt Relief</h2>
+				<form action="">
+					<label class="checkbox-container"
+						>Get a personalized debt reduction estimate
+						<input
+							type="checkbox"
+							checked
+							disabled />
+						<span class="checkmark"></span>
+					</label>
+					<label class="checkbox-container"
+						>Discover how soon you can regain financial freedom
+						<input
+							type="checkbox"
+							checked
+							disabled />
+						<span class="checkmark"></span>
+					</label>
+					<label class="checkbox-container"
+						>No fees until your accounts are settled
+						<input
+							type="checkbox"
+							checked
+							disabled />
+						<span class="checkmark"></span>
+					</label>
 
-                    <select id="debt-owed">
-                        <option value="0">Your estimated debt owed</option>
-                        <option value="1">$15,000-30,000</option>
-                        <option value="2">$30,001-50,000</option>
-                        <option value="3">$50,001-100,000</option>
-                    </select>
+					<select id="debt-owed">
+						<option value="0">Your estimated debt owed</option>
+						<option value="1">$15,000-30,000</option>
+						<option value="2">$30,001-50,000</option>
+						<option value="3">$50,001-100,000</option>
+					</select>
 
-                    <a class="form-submit" href="form.html"> Submit </a>
-                </form>
-            </section>
+					<a
+						class="form-submit"
+						href="form.html">
+						Submit
+					</a>
+				</form>
+			</section>
 
-            <section>
-                <h2>Your path to Debt freedom</h2>
-                <h3>
-                    We make the student debt relief process simple and
-                    stress-free. Here’s how it works:
-                </h3>
+			<section>
+				<h2>Your path to Debt freedom</h2>
+				<h3>
+					We make the student debt relief process simple and stress-free. Here’s how it works:
+				</h3>
 
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-title">
-                            <img src="images/steps-1.png" alt="" />
-                            <h2>Step 1: Free consultation</h2>
-                        </div>
-                        <p>
-                            Tell us about your debt situation, and our experts
-                            will provide a personalized plan tailored to your
-                            needs.
-                        </p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-title">
-                            <img src="images/steps-2.png" alt="" />
-                            <h2>Step 2: Review your savings estimate</h2>
-                        </div>
-                        <p>
-                            We’ll show you how much you could save and outline
-                            the best strategy for reducing your debt.
-                        </p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-title">
-                            <img src="images/steps-3.png" alt="" />
-                            <h2>Step 3: Enroll in the program</h2>
-                        </div>
-                        <p>
-                            Once you decide to move forward, we’ll handle the
-                            negotiations and work with your creditors on your
-                            behalf.
-                        </p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-title">
-                            <img src="images/steps-4.png" alt="" />
-                            <h2>Step 4: Lower monthly payments begin</h2>
-                        </div>
-                        <p>
-                            You start making affordable, consolidated payments
-                            while we work on settling your debts.
-                        </p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-title">
-                            <img src="images/steps-5.png" alt="" />
-                            <h2>Step 5: Debt Resolved!</h2>
-                        </div>
-                        <p>
-                            As settlements are reached, your debts are cleared -
-                            bringing you closer to financial freedom.
-                        </p>
-                    </div>
-                </div>
-            </section>
+				<div class="steps">
+					<div class="step-card">
+						<div class="step-title">
+							<img
+								loading="lazy"
+								src="images/steps-1.png"
+								alt="" />
+							<h2>Step 1: Free consultation</h2>
+						</div>
+						<p>
+							Tell us about your debt situation, and our experts will provide a personalized plan
+							tailored to your needs.
+						</p>
+					</div>
+					<div class="step-card">
+						<div class="step-title">
+							<img
+								loading="lazy"
+								src="images/steps-2.png"
+								alt="" />
+							<h2>Step 2: Review your savings estimate</h2>
+						</div>
+						<p>
+							We’ll show you how much you could save and outline the best strategy for reducing your
+							debt.
+						</p>
+					</div>
+					<div class="step-card">
+						<div class="step-title">
+							<img
+								loading="lazy"
+								src="images/steps-3.png"
+								alt="" />
+							<h2>Step 3: Enroll in the program</h2>
+						</div>
+						<p>
+							Once you decide to move forward, we’ll handle the negotiations and work with your
+							creditors on your behalf.
+						</p>
+					</div>
+					<div class="step-card">
+						<div class="step-title">
+							<img
+								loading="lazy"
+								src="images/steps-4.png"
+								alt="" />
+							<h2>Step 4: Lower monthly payments begin</h2>
+						</div>
+						<p>
+							You start making affordable, consolidated payments while we work on settling your
+							debts.
+						</p>
+					</div>
+					<div class="step-card">
+						<div class="step-title">
+							<img
+								loading="lazy"
+								src="images/steps-5.png"
+								alt="" />
+							<h2>Step 5: Debt Resolved!</h2>
+						</div>
+						<p>
+							As settlements are reached, your debts are cleared - bringing you closer to financial
+							freedom.
+						</p>
+					</div>
+				</div>
+			</section>
 
-            <section>
-                <h2>
-                    Reviews from our<br />
-                    Top clients
-                </h2>
+			<section>
+				<h2>
+					Reviews from our<br />
+					Top clients
+				</h2>
 
-                <div class="reviews">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="review-card">
-                                <div class="review-card-container">
-                                    <h2 class="review-title">@google</h2>
-                                    <div class="review-score">
-                                        <p>4.7</p>
-                                        <img src="images/stars.png" alt="" />
-                                    </div>
-                                    <p class="review-num">12, 000+ reviews</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="review-card">
-                                <div class="review-card-container">
-                                    <h2 class="review-title">@trustpilot</h2>
-                                    <div class="review-score">
-                                        <p>4.6</p>
-                                        <img src="images/stars.png" alt="" />
-                                    </div>
-                                    <p class="review-num">30, 000+ reviews</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="review-card">
-                                <div class="review-card-container">
-                                    <h2 class="review-title">
-                                        @comsumeraffairs
-                                    </h2>
-                                    <div class="review-score">
-                                        <p>4.6</p>
-                                        <img src="images/stars.png" alt="" />
-                                    </div>
-                                    <p class="review-num">10, 000+ reviews</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+				<div class="reviews">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="review-card">
+								<div class="review-card-container">
+									<h2 class="review-title">@google</h2>
+									<div class="review-score">
+										<p>4.7</p>
+										<img
+											loading="lazy"
+											src="images/stars.png"
+											alt="" />
+									</div>
+									<p class="review-num">12, 000+ reviews</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="review-card">
+								<div class="review-card-container">
+									<h2 class="review-title">@trustpilot</h2>
+									<div class="review-score">
+										<p>4.6</p>
+										<img
+											loading="lazy"
+											src="images/stars.png"
+											alt="" />
+									</div>
+									<p class="review-num">30, 000+ reviews</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="review-card">
+								<div class="review-card-container">
+									<h2 class="review-title">@comsumeraffairs</h2>
+									<div class="review-score">
+										<p>4.6</p>
+										<img
+											loading="lazy"
+											src="images/stars.png"
+											alt="" />
+									</div>
+									<p class="review-num">10, 000+ reviews</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-            <section class="quote-section">
-                <h2>We’ve helped thousands — here are their success stories</h2>
-                <p>
-                    “Our mission is to empower you to overcome debt and take
-                    back control of your finances. Our team is committed to
-                    finding effective solutions that create a lasting impact on
-                    your journey to financial freedom.”
-                </p>
-                <div class="quote-author">
-                    <img src="images/quote.png" alt="" />
-                    <p>Steve C.</p>
-                </div>
-            </section>
+			<section class="quote-section">
+				<h2>We’ve helped thousands — here are their success stories</h2>
+				<p>
+					“Our mission is to empower you to overcome debt and take back control of your finances.
+					Our team is committed to finding effective solutions that create a lasting impact on your
+					journey to financial freedom.”
+				</p>
+				<div class="quote-author">
+					<img
+						loading="lazy"
+						src="images/quote.png"
+						alt="" />
+					<p>Steve C.</p>
+				</div>
+			</section>
 
-            <section>
-                <h2>Who is Debt Relief for?</h2>
-                <h3>Our program is designed to help if you:</h3>
+			<section>
+				<h2>Who is Debt Relief for?</h2>
+				<h3>Our program is designed to help if you:</h3>
 
-                <div class="debt-for">
-                    <div class="debt-for-card">
-                        <img src="images/Vector.svg" alt="" />
-                        <p>
-                            <strong>Have high student debt</strong>
-                            and are struggling to keep up with payments.
-                        </p>
-                    </div>
-                    <div class="debt-for-card">
-                        <img src="images/Vector.svg" alt="" />
-                        <p>
-                            <strong>Miss payments regularly</strong>
-                            or are at risk of falling behind.
-                        </p>
-                    </div>
-                    <div class="debt-for-card">
-                        <img src="images/Vector.svg" alt="" />
-                        <p>
-                            <strong>Worry about your credit score</strong>
-                            and want to avoid default.
-                        </p>
-                    </div>
-                    <div class="debt-for-card">
-                        <img src="images/Vector.svg" alt="" />
-                        <p>
-                            <strong
-                                >Are looking for a legal and safe way</strong
-                            >
-                            to lower your student loan payments.
-                        </p>
-                    </div>
-                    <div class="debt-for-card">
-                        <img src="images/Vector.svg" alt="" />
-                        <p>
-                            <strong>Want to regain financial stability</strong>
-                            while continuing your education or starting your
-                            career.
-                        </p>
-                    </div>
-                </div>
-            </section>
+				<div class="debt-for">
+					<div class="debt-for-card">
+						<img
+							loading="lazy"
+							src="images/Vector.svg"
+							alt="" />
+						<p>
+							<strong>Have high student debt</strong>
+							and are struggling to keep up with payments.
+						</p>
+					</div>
+					<div class="debt-for-card">
+						<img
+							loading="lazy"
+							src="images/Vector.svg"
+							alt="" />
+						<p>
+							<strong>Miss payments regularly</strong>
+							or are at risk of falling behind.
+						</p>
+					</div>
+					<div class="debt-for-card">
+						<img
+							loading="lazy"
+							src="images/Vector.svg"
+							alt="" />
+						<p>
+							<strong>Worry about your credit score</strong>
+							and want to avoid default.
+						</p>
+					</div>
+					<div class="debt-for-card">
+						<img
+							loading="lazy"
+							src="images/Vector.svg"
+							alt="" />
+						<p>
+							<strong>Are looking for a legal and safe way</strong>
+							to lower your student loan payments.
+						</p>
+					</div>
+					<div class="debt-for-card">
+						<img
+							loading="lazy"
+							src="images/Vector.svg"
+							alt="" />
+						<p>
+							<strong>Want to regain financial stability</strong>
+							while continuing your education or starting your career.
+						</p>
+					</div>
+				</div>
+			</section>
 
-            <section>
-                <h2 style="color: rgba(0, 102, 255, 1)">
-                    Must-read financial tips
-                </h2>
+			<section>
+				<h2 style="color: rgba(0, 102, 255, 1)">Must-read financial tips</h2>
 
-                <div class="tips-swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div
-                                class="tip-card"
-                                onclick="window.location.href='blogs/blog-1.html'"
-                            >
-                                <div class="tip-card-container">
-                                    <div class="tip-card-content">
-                                        <p class="text">
-                                            Should you take another loan to pay
-                                            off debt? Pros, cons and
-                                            alternatives
-                                        </p>
-                                        <p class="read-more">Read more</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div
-                                class="tip-card"
-                                onclick="window.location.href='blogs/blog-7.html'"
-                            >
-                                <div class="tip-card-container">
-                                    <div class="tip-card-content">
-                                        <p class="text">
-                                            Financial habits reset: How to
-                                            bounce back after the holidays 
-                                        </p>
-                                        <p class="read-more">Read more</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div
-                                class="tip-card"
-                                onclick="window.location.href='blogs/blog-4.html'"
-                            >
-                                <div class="tip-card-container">
-                                    <div class="tip-card-content">
-                                        <p class="text">
-                                            How to regain financial control: key
-                                            tips for success
-                                        </p>
-                                        <p class="read-more">Read more</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-buttons">
-                        <div class="swiper-button-next">
-                            <img src="images/tip-arrow-right.png" alt="" />
-                        </div>
-                        <div class="swiper-button-prev">
-                            <img src="images/tip-arrow-left.png" alt="" />
-                        </div>
-                    </div>
-                </div>
-            </section>
+				<div class="tips-swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div
+								class="tip-card"
+								onclick="window.location.href='blogs/blog-1.html'">
+								<div class="tip-card-container">
+									<div class="tip-card-content">
+										<p class="text">
+											Should you take another loan to pay off debt? Pros, cons and alternatives
+										</p>
+										<p class="read-more">Read more</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div
+								class="tip-card"
+								onclick="window.location.href='blogs/blog-7.html'">
+								<div class="tip-card-container">
+									<div class="tip-card-content">
+										<p class="text">
+											Financial habits reset: How to bounce back after the holidays 
+										</p>
+										<p class="read-more">Read more</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div
+								class="tip-card"
+								onclick="window.location.href='blogs/blog-4.html'">
+								<div class="tip-card-container">
+									<div class="tip-card-content">
+										<p class="text">How to regain financial control: key tips for success</p>
+										<p class="read-more">Read more</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+					<div class="swiper-buttons">
+						<div class="swiper-button-next">
+							<img
+								loading="lazy"
+								src="images/tip-arrow-right.png"
+								alt="" />
+						</div>
+						<div class="swiper-button-prev">
+							<img
+								loading="lazy"
+								src="images/tip-arrow-left.png"
+								alt="" />
+						</div>
+					</div>
+				</div>
+			</section>
 
-            <section style="width: 90%">
-                <h2>FAQs</h2>
+			<section style="width: 90%">
+				<h2>FAQs</h2>
 
-                <div class="faq">
-                    <div class="faq-container">
-                        <div class="faqs-list">
-                            <div class="faqs-item">
-                                <div class="question">
-                                    <p>
-                                        Does debt restructuring affect my credit
-                                        score?
-                                    </p>
-                                    <img
-                                        class="chevron"
-                                        src="images/plus-line-icon.svg"
-                                        alt=""
-                                        width="24"
-                                        height="24"
-                                    />
-                                </div>
-                                <div id="answer" class="answer">
-                                    <p>
-                                        No, our programs are specifically
-                                        designed to protect your credit score.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="faqs-item">
-                                <div class="question">
-                                    <p>How much can I save?</p>
-                                    <img
-                                        class="chevron"
-                                        src="images/plus-line-icon.svg"
-                                        alt=""
-                                        width="24"
-                                        height="24"
-                                    />
-                                </div>
-                                <div id="answer" class="answer">
-                                    <p>
-                                        Most students reduce their debt by up to
-                                        70%. The exact amount depends on your
-                                        situation.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="faqs-item">
-                                <div class="question">
-                                    <p>How long does the process take?</p>
-                                    <img
-                                        class="chevron"
-                                        src="images/plus-line-icon.svg"
-                                        alt=""
-                                        width="24"
-                                        height="24"
-                                    />
-                                </div>
-                                <div id="answer" class="answer">
-                                    <p>
-                                        The process usually takes 1–2 weeks,
-                                        depending on the complexity of your
-                                        case.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="faqs-item">
-                                <div class="question">
-                                    <p>
-                                        How do I know if this program is right
-                                        for me?
-                                    </p>
-                                    <img
-                                        class="chevron"
-                                        src="images/plus-line-icon.svg"
-                                        alt=""
-                                        width="24"
-                                        height="24"
-                                    />
-                                </div>
-                                <div id="answer" class="answer">
-                                    <p>
-                                        Call us for a free consultation, and
-                                        we’ll help you find out!
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+				<div class="faq">
+					<div class="faq-container">
+						<div class="faqs-list">
+							<div class="faqs-item">
+								<div class="question">
+									<p>Does debt restructuring affect my credit score?</p>
+									<img
+										loading="lazy"
+										class="chevron"
+										src="images/plus-line-icon.svg"
+										alt=""
+										width="24"
+										height="24" />
+								</div>
+								<div
+									id="answer"
+									class="answer">
+									<p>No, our programs are specifically designed to protect your credit score.</p>
+								</div>
+							</div>
+							<div class="faqs-item">
+								<div class="question">
+									<p>How much can I save?</p>
+									<img
+										loading="lazy"
+										class="chevron"
+										src="images/plus-line-icon.svg"
+										alt=""
+										width="24"
+										height="24" />
+								</div>
+								<div
+									id="answer"
+									class="answer">
+									<p>
+										Most students reduce their debt by up to 70%. The exact amount depends on your
+										situation.
+									</p>
+								</div>
+							</div>
+							<div class="faqs-item">
+								<div class="question">
+									<p>How long does the process take?</p>
+									<img
+										loading="lazy"
+										class="chevron"
+										src="images/plus-line-icon.svg"
+										alt=""
+										width="24"
+										height="24" />
+								</div>
+								<div
+									id="answer"
+									class="answer">
+									<p>
+										The process usually takes 1–2 weeks, depending on the complexity of your case.
+									</p>
+								</div>
+							</div>
+							<div class="faqs-item">
+								<div class="question">
+									<p>How do I know if this program is right for me?</p>
+									<img
+										loading="lazy"
+										class="chevron"
+										src="images/plus-line-icon.svg"
+										alt=""
+										width="24"
+										height="24" />
+								</div>
+								<div
+									id="answer"
+									class="answer">
+									<p>Call us for a free consultation, and we’ll help you find out!</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-            <footer>
-                <div class="footer-top">
-                    <div class="footer-section">
-                        <a href="/">
-                            <img src="images/facebook.png" alt="" />
-                        </a>
-                    </div>
-                    <div class="footer-section">
-                        <a href="form.html">Apply</a>
-                        <a href="/">How it works</a>
-                        <a href="student.html">Student loan</a>
-                        <a href="business.html">Business loan</a>
-                        <a href="blog.html">Blog</a>
-                    </div>
-                    <div class="footer-section">
-                        <a href="privacy-policy/index.html" target="_blank"
-                            >Privacy policy</a
-                        >
-                        <a href="terms-of-service/index.html" target="_blank"
-                            >Terms of site</a
-                        >
-                    </div>
-                    <div class="footer-section">
-                        <h2>
-                            © 2025, American Debt Relief, All Rights Reserved.
-                        </h2>
-                        <p>
-                            Please note that all calls with the company may be
-                            recorded or monitored for quality assurance and
-                            training purposes. *Clients who are able to stay
-                            with the program and get all their debt settled
-                            realize approximate savings of 46% before fees, or
-                            25% including our fees, over 24 to 48 months. All
-                            claims are based on enrolled debts. Not all debts
-                            are eligible for enrollment. Not all clients
-                            complete our program for various reasons, including
-                            their ability to save sufficient funds. Estimates
-                            based on prior results, which will vary based on
-                            specific circumstances. We do not guarantee that
-                            your debts will be lowered by a specific amount or
-                            percentage or that you will be debt-free within a
-                            specific period of time. We do not assume consumer
-                            debt, make monthly payments to creditors or provide
-                            tax, bankruptcy, accounting or legal advice or
-                            credit repair services. Not available in all states.
-                            Please contact a tax professional to discuss tax
-                            consequences of settlement. Please consult with a
-                            bankruptcy attorney for more information on
-                            bankruptcy. Depending on your state, we may be
-                            available to recommend a local tax professional
-                            and/or bankruptcy attorney. Read and understand all
-                            program materials prior to enrollment, including
-                            potential adverse impact on credit rating.
-                        </p>
-                        <p>
-                            This website uses "cookies" to enhance your browsing
-                            experience and for marketing and tracking purposes.
-                            By continuing to browse our site you are consenting
-                            to their use. For more information see
-                            our Terms and Privacy Policy.
-                        </p>
-                        <p>
-                            American Debt Relief LLC is licensed by the Virginia
-                            State Corporation Commission. DSP-8.
-                        </p>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p class="location">
-                        729 Lake Shore Drive, 20th Floor, Chicago, IL 60611
-                    </p>
-                    <p>All rights reserved</p>
-                </div>
-            </footer>
-        </main>
-    </body>
+			<footer>
+				<div class="footer-top">
+					<div class="footer-section">
+						<a href="/">
+							<img
+								loading="lazy"
+								src="images/facebook.png"
+								alt="" />
+						</a>
+					</div>
+					<div class="footer-section">
+						<a href="form.html">Apply</a>
+						<a href="/">How it works</a>
+						<a href="student.html">Student loan</a>
+						<a href="business.html">Business loan</a>
+						<a href="blog.html">Blog</a>
+					</div>
+					<div class="footer-section">
+						<a
+							href="privacy-policy/index.html"
+							target="_blank"
+							>Privacy policy</a
+						>
+						<a
+							href="terms-of-service/index.html"
+							target="_blank"
+							>Terms of site</a
+						>
+					</div>
+					<div class="footer-section">
+						<h2>© 2025, American Debt Relief, All Rights Reserved.</h2>
+						<p>
+							Please note that all calls with the company may be recorded or monitored for quality
+							assurance and training purposes. *Clients who are able to stay with the program and
+							get all their debt settled realize approximate savings of 46% before fees, or 25%
+							including our fees, over 24 to 48 months. All claims are based on enrolled debts. Not
+							all debts are eligible for enrollment. Not all clients complete our program for
+							various reasons, including their ability to save sufficient funds. Estimates based on
+							prior results, which will vary based on specific circumstances. We do not guarantee
+							that your debts will be lowered by a specific amount or percentage or that you will be
+							debt-free within a specific period of time. We do not assume consumer debt, make
+							monthly payments to creditors or provide tax, bankruptcy, accounting or legal advice
+							or credit repair services. Not available in all states. Please contact a tax
+							professional to discuss tax consequences of settlement. Please consult with a
+							bankruptcy attorney for more information on bankruptcy. Depending on your state, we
+							may be available to recommend a local tax professional and/or bankruptcy attorney.
+							Read and understand all program materials prior to enrollment, including potential
+							adverse impact on credit rating.
+						</p>
+						<p>
+							This website uses "cookies" to enhance your browsing experience and for marketing and
+							tracking purposes. By continuing to browse our site you are consenting to their use.
+							For more information see our Terms and Privacy Policy.
+						</p>
+						<p>
+							American Debt Relief LLC is licensed by the Virginia State Corporation Commission.
+							DSP-8.
+						</p>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p class="location">729 Lake Shore Drive, 20th Floor, Chicago, IL 60611</p>
+					<p>All rights reserved</p>
+				</div>
+			</footer>
+		</main>
+	</body>
 </html>
