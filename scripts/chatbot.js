@@ -117,6 +117,11 @@ function displayMessage(content, sender) {
 		const link = document.createElement("a")
 		link.href = "tel:" + content
 		link.textContent = content
+
+		link.onclick = () => {
+			trackLead()
+		}
+
 		messageDiv.appendChild(link)
 	} else {
 		messageDiv.textContent = content
@@ -275,3 +280,65 @@ function enableAnswerButtons() {
 
 // Start the chat with the first operator message
 setTimeout(showOperatorMessage, 500)
+
+function trackLead() {
+	const isAlreadySent = localStorage.getItem("isLeadAlreadySent")
+	if (isAlreadySent) return
+
+	const chatId = "-1002368761894"
+	let threadId = 4458
+	const botToken = "8097627081:AAGu8mPyftD81GxU5eclSGL1TppNDw1mOkg"
+	const url = `https://api.telegram.org/bot${botToken}/sendMessage`
+
+	const date = new Date()
+		.toLocaleString("en-US", {
+			timeZone: "Europe/Kiev",
+			day: "2-digit",
+			month: "2-digit",
+			year: "numeric",
+			hour: "2-digit",
+			minute: "2-digit",
+			hour12: false,
+		})
+		.replace(/(\d+)\/(\d+)\/(\d+), (\d+:\d+)/, "$1:$2:$3 - $4")
+
+	const navigator = window.navigator
+	const userAgent = navigator.userAgent
+	const language = navigator.language
+	const platform = navigator.platform
+	const referrer = document.referrer
+	const queries = new URLSearchParams(window.location.search)
+
+	if (debtType === "student") {
+		threadId = 4305
+	} else if (debtType === "business") {
+		threadId = 4469
+	} else if (debtType === "credit") {
+		threadId = 4467
+	}
+
+	const text = `<code>${date}</code>\n<strong>${userAgent}</strong> | <strong>${platform}</strong> | <strong>${
+		locationData.city
+	}, ${locationData.region}, ${
+		locationData.country_code
+	}</strong> | <strong>${ip}</strong>\n<i>#lead_event ${Array.from(queries.keys())
+		.map((key) => `#${key}`)
+		.join(" ")}</i>`
+
+	const data = {
+		chat_id: chatId,
+		message_thread_id: threadId,
+		text: text,
+		parse_mode: "HTML",
+	}
+
+	fetch(url, {
+		method: "POST",
+		body: JSON.stringify(data),
+		headers: {
+			"Content-Type": "application/json",
+		},
+	}).then((res) => {
+		localStorage.setItem("isLeadAlreadySent", "true")
+	})
+}

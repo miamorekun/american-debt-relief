@@ -47,74 +47,74 @@
 			src="scripts/mobile-menu.js"
 			type="module"></script>
 
-		<script>
+		<!-- <script>
 			// Функція для отримання bid з URL
-			function getBidFromURL() {
-				const urlParams = new URLSearchParams(window.location.search)
-				return urlParams.get("bid") // Отримання значення параметра "bid"
-			}
+			// function getBidFromURL() {
+			// 	const urlParams = new URLSearchParams(window.location.search)
+			// 	return urlParams.get("bid") // Отримання значення параметра "bid"
+			// }
 
-			async function loadOffer(bid, type) {
-				try {
-					const response = await fetch("offers/offers.json") // Завантаження JSON
-					const offers = await response.json() // Перетворення в об'єкт
+			// async function loadOffer(bid, type) {
+			// 	try {
+			// 		const response = await fetch("offers/offers.json") // Завантаження JSON
+			// 		const offers = await response.json() // Перетворення в об'єкт
 
-					if (offers[bid]) {
-						// Отримання номерів телефону
-						const creditCardPhone = offers[bid]["creditCard"]
-						const studentPhone = offers[bid]["student"]
-						const businessPhone = offers[bid]["business"]
+			// 		if (offers[bid]) {
+			// 			// Отримання номерів телефону
+			// 			const creditCardPhone = offers[bid]["creditCard"]
+			// 			const studentPhone = offers[bid]["student"]
+			// 			const businessPhone = offers[bid]["business"]
 
-						// Збереження в змінні
-						console.log(`Credit Card Phone: ${creditCardPhone}`)
-						console.log(`Student Phone: ${studentPhone}`)
-						console.log(`Business Phone: ${businessPhone}`)
+			// 			// Збереження в змінні
+			// 			console.log(`Credit Card Phone: ${creditCardPhone}`)
+			// 			console.log(`Student Phone: ${studentPhone}`)
+			// 			console.log(`Business Phone: ${businessPhone}`)
 
-						// Збереження в localStorage
-						localStorage.setItem("creditCardPhone", creditCardPhone)
-						localStorage.setItem("studentPhone", studentPhone)
-						localStorage.setItem("businessPhone", businessPhone)
-					} else {
-						console.log("Офер не знайдено")
-					}
-				} catch (error) {
-					console.error("Помилка при завантаженні JSON:", error)
-				}
-			}
+			// 			// Збереження в localStorage
+			// 			localStorage.setItem("creditCardPhone", creditCardPhone)
+			// 			localStorage.setItem("studentPhone", studentPhone)
+			// 			localStorage.setItem("businessPhone", businessPhone)
+			// 		} else {
+			// 			console.log("Офер не знайдено")
+			// 		}
+			// 	} catch (error) {
+			// 		console.error("Помилка при завантаженні JSON:", error)
+			// 	}
+			// }
 
 			// Отримання bid з URL
-			const bid = getBidFromURL()
-			const type = "creditCard" // Тип номера (creditCard, student, business)
+			// const bid = getBidFromURL()
+			// const type = "creditCard" // Тип номера (creditCard, student, business)
 
-			if (bid) {
-				loadOffer(bid, type) // Викликаємо функцію тільки якщо bid знайдено
-			} else {
-				console.log("BID не знайдено в URL")
-			}
+			// if (bid) {
+			// 	loadOffer(bid, type) // Викликаємо функцію тільки якщо bid знайдено
+			// } else {
+			// 	console.log("BID не знайдено в URL")
+			// }
 
-			// Функція для оновлення всіх посилань з певним id
-			function updateLinksWithPhone() {
-				const phoneNumber = localStorage.getItem("creditCardPhone") // Отримання номера з localStorage
-				if (!phoneNumber) {
-					console.log("Номер телефону відсутній у localStorage")
-					return
-				}
+			// // Функція для оновлення всіх посилань з певним id
+			// function updateLinksWithPhone() {
+			// 	const phoneNumber = localStorage.getItem("creditCardPhone") // Отримання номера з localStorage
+			// 	if (!phoneNumber) {
+			// 		console.log("Номер телефону відсутній у localStorage")
+			// 		return
+			// 	}
 
-				// Знаходимо всі посилання з id, наприклад, "phoneLink"
-				const links = document.querySelectorAll("#phoneLink")
+			// 	// Знаходимо всі посилання з id, наприклад, "phoneLink"
+			// 	const links = document.querySelectorAll("#phoneLink")
 
-				links.forEach((link) => {
-					link.href = `tel:` + phoneNumber // Оновлюємо посилання
-				})
+			// 	links.forEach((link) => {
+			// 		link.href = `tel:` + phoneNumber // Оновлюємо посилання
+			// 	})
 
-				console.log("Посилання оновлено з номером:", phoneNumber)
-			}
+			// 	console.log("Посилання оновлено з номером:", phoneNumber)
+			// }
 
-			// Викликати функцію після завантаження сторінки
-			document.addEventListener("DOMContentLoaded", updateLinksWithPhone)
-		</script>
+			// // Викликати функцію після завантаження сторінки
+			// document.addEventListener("DOMContentLoaded", updateLinksWithPhone)
+		</script> -->
 
-		<script>
+		<!-- <script>
 			;(function (w, d, s, o, f, js, fjs) {
 				w[o] =
 					w[o] ||
@@ -134,7 +134,7 @@
 				mask: "(xxx) xxx-xx-xx",
 				subid: "{subid}",
 			})
-		</script>
+		</script> -->
 	</head>
 	<body>
 		<nav>
@@ -190,7 +190,7 @@
 				</div>
 				<a
 					id="phoneLink"
-					href="tel:"
+					href="/form.html"
 					class="nav-button"
 					>Call us</a
 				>

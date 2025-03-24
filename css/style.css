@@ -953,12 +953,32 @@ footer {
 	z-index: 1000;
 	transition: all 0.1s ease;
 }
+
 .support-button:hover {
 	opacity: 0.8;
 }
+
 .support-button img {
 	width: 17px;
 	height: 17px;
+}
+
+.support-button::after {
+	content: "!";
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	width: 24px;
+	height: 24px;
+	background-color: #ff4545;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-weight: bold;
+	font-size: 16px;
+	border: 2px solid white;
 }
 
 .support {
